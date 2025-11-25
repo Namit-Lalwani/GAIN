@@ -6,33 +6,96 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		00A3790F2ED20E21003A88AC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A3790E2ED20E21003A88AC /* XCTest.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00A379052ED20D4D003A88AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00AA13B92ECF2CF700E137BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00AA13C02ECF2CF700E137BC;
+			remoteInfo = GAIN;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		00A379012ED20D4D003A88AC /* GAINTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GAINTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00A3790E2ED20E21003A88AC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		00AA13C12ECF2CF700E137BC /* GAIN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GAIN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		00A3790B2ED20D65003A88AC /* Exceptions for "GAIN" folder in "GAINTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				GAINTests/SessionStoreTests.swift,
+				GAINTests/WorkoutStoreTests.swift,
+			);
+			target = 00A379002ED20D4D003A88AC /* GAINTests */;
+		};
+		00AA13FF2ED11C4300E137BC /* Exceptions for "GAIN" folder in "GAIN" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				GAINTests/SessionStoreTests.swift,
+				GAINTests/WorkoutStoreTests.swift,
+				Info.plist,
+			);
+			target = 00AA13C02ECF2CF700E137BC /* GAIN */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		00A379022ED20D4D003A88AC /* GAINTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GAINTests;
+			sourceTree = "<group>";
+		};
 		00AA13C32ECF2CF700E137BC /* GAIN */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				00AA13FF2ED11C4300E137BC /* Exceptions for "GAIN" folder in "GAIN" target */,
+				00A3790B2ED20D65003A88AC /* Exceptions for "GAIN" folder in "GAINTests" target */,
+			);
 			path = GAIN;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00AA13BE2ECF2CF700E137BC /* Frameworks */ = {
+		00A378FE2ED20D4D003A88AC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		00AA13BE2ECF2CF700E137BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00A3790F2ED20E21003A88AC /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00A3790D2ED20E21003A88AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00A3790E2ED20E21003A88AC /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		00AA13B82ECF2CF700E137BC = {
 			isa = PBXGroup;
 			children = (
 				00AA13C32ECF2CF700E137BC /* GAIN */,
+				00A379022ED20D4D003A88AC /* GAINTests */,
+				00A3790D2ED20E21003A88AC /* Frameworks */,
 				00AA13C22ECF2CF700E137BC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				00AA13C12ECF2CF700E137BC /* GAIN.app */,
+				00A379012ED20D4D003A88AC /* GAINTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +112,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		00A379002ED20D4D003A88AC /* GAINTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00A379092ED20D4D003A88AC /* Build configuration list for PBXNativeTarget "GAINTests" */;
+			buildPhases = (
+				00A378FD2ED20D4D003A88AC /* Sources */,
+				00A378FE2ED20D4D003A88AC /* Frameworks */,
+				00A378FF2ED20D4D003A88AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00A379062ED20D4D003A88AC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				00A379022ED20D4D003A88AC /* GAINTests */,
+			);
+			name = GAINTests;
+			packageProductDependencies = (
+			);
+			productName = GAINTests;
+			productReference = 00A379012ED20D4D003A88AC /* GAINTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		00AA13C02ECF2CF700E137BC /* GAIN */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00AA13CC2ECF2CFA00E137BC /* Build configuration list for PBXNativeTarget "GAIN" */;
@@ -80,6 +167,10 @@
 				LastSwiftUpdateCheck = 2610;
 				LastUpgradeCheck = 2610;
 				TargetAttributes = {
+					00A379002ED20D4D003A88AC = {
+						CreatedOnToolsVersion = 26.1.1;
+						TestTargetID = 00AA13C02ECF2CF700E137BC;
+					};
 					00AA13C02ECF2CF700E137BC = {
 						CreatedOnToolsVersion = 26.1.1;
 					};
@@ -100,11 +191,19 @@
 			projectRoot = "";
 			targets = (
 				00AA13C02ECF2CF700E137BC /* GAIN */,
+				00A379002ED20D4D003A88AC /* GAINTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		00A378FF2ED20D4D003A88AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00AA13BF2ECF2CF700E137BC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +214,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		00A378FD2ED20D4D003A88AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00AA13BD2ECF2CF700E137BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +230,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		00A379062ED20D4D003A88AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00AA13C02ECF2CF700E137BC /* GAIN */;
+			targetProxy = 00A379052ED20D4D003A88AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		00A379072ED20D4D003A88AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Y4JJ534M2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.namitlalwani.GAINTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GAIN.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GAIN";
+			};
+			name = Debug;
+		};
+		00A379082ED20D4D003A88AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2Y4JJ534M2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.namitlalwani.GAINTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GAIN.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GAIN";
+			};
+			name = Release;
+		};
 		00AA13CA2ECF2CFA00E137BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -251,16 +407,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GAIN/GAIN.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2Y4JJ534M2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GAIN/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -283,16 +442,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GAIN/GAIN.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2Y4JJ534M2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GAIN/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,6 +475,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		00A379092ED20D4D003A88AC /* Build configuration list for PBXNativeTarget "GAINTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00A379072ED20D4D003A88AC /* Debug */,
+				00A379082ED20D4D003A88AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		00AA13BC2ECF2CF700E137BC /* Build configuration list for PBXProject "GAIN" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

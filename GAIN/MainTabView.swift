@@ -1,8 +1,33 @@
-//
-//  MainTabView.swift
-//  GAIN
-//
-//  Created by RUSTY on 20/11/25.
-//
+import SwiftUI
 
-import Foundation
+struct MainTabView: View {
+    var body: some View {
+        TabView {
+            HomeView()
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+
+            TemplatesView()
+                .tabItem {
+                    Image(systemName: "list.bullet")
+                    Text("Templates")
+                }
+
+            WorkoutMenuView()
+                .tabItem {
+                    Image(systemName: "play.circle")
+                    Text("Workout")
+                }
+
+            HistoryView()
+                .tabItem {
+                    Image(systemName: "clock")
+                    Text("History")
+                }
+        }
+    }
+}
+
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>NSHealthShareUsageDescription</key>
+    <string>GAIN app needs to read workout and heart rate data to show live training metrics.</string>
+    <key>NSHealthUpdateUsageDescription</key>
+    <string>GAIN app needs to write workout and active energy to Health for accurate tracking.</string>
+	<key>UIBackgroundModes</key>
+	<array/>
+</dict>
+</plist>

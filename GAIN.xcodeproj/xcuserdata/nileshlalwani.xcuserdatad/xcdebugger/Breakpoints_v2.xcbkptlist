@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "85423018-2E98-45F0-A3B7-57F2AB1AB638"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "CB2C567E-FB6F-4872-8FF1-9FF60934DA14"
+            shouldBeEnabled = "Yes"
+            condition = "dyld[3158]: Library not loaded: @rpath/XCTest.framework/XCTest&#10;  Referenced from: &lt;96848701-0B7B-3366-A3CD-9D68F4D823C2&gt; /private/var/containers/Bundle/Application/B00E1155-80C7-48D2-B7EB-A1D95619608D/GAIN.app/GAIN.debug.dylib&#10;  Reason: tried: &apos;/private/var/containers/Bundle/Application/B00E1155-80C7-48D2-B7EB-A1D95619608D/GAIN.app/Frameworks/XCTest.framework/XCTest&apos; (no such file), &apos;/private/var/containers/Bundle/Application/B00E1155-80C7-48D2-B7EB-A1D95619608D/GAIN.app/XCTest.framework/XCTest&apos; (no such file), &apos;/private/var/containers/Bundle/Application/B00E1155-80C7-48D2-B7EB-A1D95619608D/GAIN.app/Frameworks/XCTest.framework/XCTest&apos; (no such file), &apos;/private/var/containers/Bundle/Application/B00E1155-80C7-48D2-B7EB-A1D95619608D/GAIN.app/XCTest.framework/XCTest&apos; (no such file), &apos;/private/var/containers/Bundle/Application/B00E1155-80C7-48D2-B7EB-A1D95619608D/GAIN.app/Frameworks/XCTest.framework/XCTest&apos; (no such file)&#10;Library not loaded: @rpath/XCTest.framework/XCTest&#10;  Referenced from: &lt;96848701-0B7B-3366-A3CD-9D68F4D823C2&gt; /private/var/containers/Bundle/Application/B00E1155-80C7-48D2-B7EB-A1D95619608D/GAIN.app/GAIN.debug.dylib&#10;  Reason: tried: &apos;/private/var/containers/Bundle/Application/B00E1155-80C7-48D2-B7EB-A1D95619608D/GAIN.app/Frameworks/XCTest.framework/XCTest&apos; (no such file), &apos;/private/var/containers/Bundle/Application/B00E1155-80C7-48D2-B7EB-A1D95619608D/GAIN.app/XCTest.framework/XCTest&apos; (no such file), &apos;/private/var/containers/Bundle/Application/B00E1155-80C7-48D2-B7EB-A1D95619608D/GAIN.app/Frameworks/XCTest.framework/XCTest&apos; (no such file), &apos;/private/var/containers/Bundle/Application/B00E1155-80C7-48D2-B7EB-A1D95619608D/GAIN.app/XCTest.framework/XCTest&apos; (no such file), &apos;/private/var/containers/Bundle/Application/B00E1155-80C7-48D2-B7EB-A1D95619608D/GAIN.app/Frameworks/XCTest.framework/XCTest&apos; (no such file)&#10;dyld config: DYLD_LIBRARY_PATH=/usr/lib/system/introspection DYLD_INSERT_LIBRARIES=/usr/lib/libLogRedirect.dylib:/usr/lib/libBacktraceRecording.dylib:/usr/lib/libMainThreadChecker.dylib:/usr/lib/libRPAC.dylib:/usr/lib/libViewDebuggerSupport.dylib&#10;Library not loaded: @rpath/XCTest.framework/XCTest&#10;  Referenced from: &lt;96848701-0B7B-3366-A3CD-9D68F4D823C2&gt; /private/var/containers/Bundle/Application/B00E1155-80C7-48D2-B7EB-A1D95619608D/GAIN.app/GAIN.debug.dylib&#10;  Reason: tried: &apos;/private/var/containers/Bundle/Application/B00E1155-80C7-48D2-B7EB-A1D95619608D/GAIN.app/Frameworks/XCTest.framework/XCTest&apos; (no such file), &apos;/private/var/containers/Bundle/Application/B00E1155-80C7-48D2-B7EB-A1D95619608D/GAIN.app/XCTest.framework/XCTest&apos; (no such file), &apos;/private/var/containers/Bundle/Application/B00E1155-80C7-48D2-B7EB-A1D95619608D/GAIN.app/Frameworks/XCTest.framework/XCTest&apos; (no such file), &apos;/private/var/containers/Bundle/Application/B00E1155-80C7-48D2-B7EB-A1D95619608D/GAIN.app/XCTest.framework/XCTest&apos; (no such file), &apos;/private/var/containers/Bundle/Application/B00E1155-80C7-48D2-B7EB-A1D95619608D/GAIN.app/Frameworks/XCTest.framework/XCTest&apos; (no such file)&#10;dyld config: DYLD_LIBRARY_PATH=/usr/lib/system/introspection DYLD_INSERT_LIBRARIES=/usr/lib/libLogRedirect.dylib:/usr/lib/libBacktraceRecording.dylib:/usr/lib/libMainThreadChecker.dylib:/usr/lib/libRPAC.dylib:/usr/lib/libViewDebuggerSupport.dylib&#10;"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

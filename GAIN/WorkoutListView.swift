@@ -1,8 +1,21 @@
-//
-//  WorkoutListView.swift
-//  GAIN
-//
-//  Created by RUSTY on 20/11/25.
-//
+import SwiftUI
 
-import Foundation
+struct WorkoutListView: View {
+    @EnvironmentObject var workoutStore: WorkoutStore
+
+    var body: some View {
+        VStack {
+            List {
+                ForEach(workoutStore.workouts) { workout in
+                    Text(workout.templateName ?? "Custom Workout")
+                }
+            }
+
+            Button("+ Add Workout") {
+                // Will implement later
+            }
+            .padding()
+        }
+        .navigationTitle("Workouts")
+    }
+}
