@@ -6,8 +6,6 @@
     <string>GAIN app needs to read workout and heart rate data to show live training metrics.</string>
     <key>NSHealthUpdateUsageDescription</key>
     <string>GAIN app needs to write workout and active energy to Health for accurate tracking.</string>
-	<key>NSHealthShareUsageDescription</key>
-	<string></string>
 	<key>UIBackgroundModes</key>
 	<array/>
 </dict>

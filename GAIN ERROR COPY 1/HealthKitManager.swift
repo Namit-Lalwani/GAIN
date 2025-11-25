@@ -28,9 +28,15 @@ final class HealthKitManager: NSObject, ObservableObject {
             HKObjectType.workoutType()
         ]
 
+        guard let heartRateType = HKQuantityType.quantityType(forIdentifier: .heartRate),
+              let energyType = HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned) else {
+            completion(false)
+            return
+        }
+        
         let typesToRead: Set = [
-            HKQuantityType.quantityType(forIdentifier: .heartRate)!,
-            HKQuantityType.quantityType(forIdentifier: .activeEnergyBurned)!,
+            heartRateType,
+            energyType,
             HKObjectType.workoutType()
         ]
 

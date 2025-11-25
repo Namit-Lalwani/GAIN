@@ -2,10 +2,31 @@ import SwiftUI
 
 struct HistoryView: View {
     @EnvironmentObject var workoutStore: WorkoutStore
+    @EnvironmentObject var sessionStore: SessionStore
 
     var body: some View {
         NavigationView {
             List {
+                Section(header: Text("Analytics")) {
+                    NavigationLink(destination: AIInsightsView()) {
+                        HStack {
+                            Image(systemName: "chart.line.uptrend.xyaxis")
+                                .foregroundColor(.blue)
+                            Text("AI Insights")
+                                .font(.headline)
+                        }
+                    }
+                    
+                    NavigationLink(destination: ExerciseProgressView()) {
+                        HStack {
+                            Image(systemName: "chart.bar")
+                                .foregroundColor(.green)
+                            Text("Exercise Progress")
+                                .font(.headline)
+                        }
+                    }
+                }
+                
                 Section(header: Text("Past Workouts")) {
                     if workoutStore.workouts.isEmpty {
                         Text("No workouts yet")
@@ -13,8 +34,8 @@ struct HistoryView: View {
                         ForEach(workoutStore.workouts) { w in
                             NavigationLink(destination: WorkoutDetailView(workout: w)) {
                                 VStack(alignment: .leading) {
-                                    Text(w.name)
-                                    Text("\(w.date, style: .date)")
+                                    Text(w.templateName ?? "Custom Workout")
+                                    Text("\(w.start, style: .date)")
                                         .font(.caption)
                                         .foregroundColor(.secondary)
                                 }
@@ -30,13 +51,13 @@ struct HistoryView: View {
 
 // Simple WorkoutDetailView
 struct WorkoutDetailView: View {
-    let workout: Workout
+    let workout: WorkoutRecord
 
     var body: some View {
         List {
             Section(header: Text("Info")) {
-                Text("Name: \(workout.name)")
-                Text("Date: \(workout.date, style: .date)")
+                Text("Template: \(workout.templateName ?? "Custom")")
+                Text("Date: \(workout.start, style: .date)")
             }
 
             Section(header: Text("Exercises")) {
@@ -44,7 +65,7 @@ struct WorkoutDetailView: View {
                     VStack(alignment: .leading) {
                         Text(ex.name).bold()
                         ForEach(ex.sets) { s in
-                            Text("\(s.reps) × \(s.weight ?? 0, specifier: "%.1f")")
+                            Text("\(s.reps) × \(s.weight, specifier: "%.1f")")
                         }
                     }
                 }

@@ -5,6 +5,20 @@ struct WeeklyRoutinePlannerView: View {
     @AppStorage("weeklyAssignments") private var weeklyAssignmentsData: Data = Data()
 
     @State private var assignments: [String: UUID] = [:]
+    @AppStorage("restDayUUID") private var restDayUUIDString: String = ""
+    
+    private var restDayUUID: UUID {
+        if restDayUUIDString.isEmpty {
+            let newUUID = UUID()
+            restDayUUIDString = newUUID.uuidString
+            return newUUID
+        }
+        return UUID(uuidString: restDayUUIDString) ?? {
+            let newUUID = UUID()
+            restDayUUIDString = newUUID.uuidString
+            return newUUID
+        }()
+    }
 
     private let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
@@ -13,10 +27,16 @@ struct WeeklyRoutinePlannerView: View {
             Section(header: Text("Assign Templates to Days")) {
                 ForEach(days, id: \.self) { day in
                     Picker(day, selection: Binding(
-                        get: { assignments[day] ?? UUID() },
-                        set: { assignments[day] = $0 }
+                        get: { assignments[day] ?? restDayUUID },
+                        set: { newValue in
+                            if newValue == restDayUUID {
+                                assignments.removeValue(forKey: day)
+                            } else {
+                                assignments[day] = newValue
+                            }
+                        }
                     )) {
-                        Text("Rest Day").tag(UUID())
+                        Text("Rest Day").tag(restDayUUID)
                         ForEach(templateStore.templates) { t in
                             Text(t.name).tag(t.id)
                         }
@@ -34,6 +54,7 @@ struct WeeklyRoutinePlannerView: View {
             Section(header: Text("Today's Plan")) {
                 let today = getToday()
                 if let templateID = assignments[today],
+                   templateID != restDayUUID,
                    let template = templateStore.templates.first(where: { $0.id == templateID }) {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Today is \(today)")

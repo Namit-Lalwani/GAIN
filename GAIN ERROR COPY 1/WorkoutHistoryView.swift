@@ -24,7 +24,11 @@ struct WorkoutHistoryView: View {
                             }
                         }
                     }
-                    .onDelete(perform: store.delete)
+                    .onDelete { indexSet in
+                        for index in indexSet {
+                            store.delete(id: store.workouts[index].id)
+                        }
+                    }
                 }
             }
             .navigationTitle("Workout History")
@@ -81,7 +85,7 @@ struct WorkoutHistoryDetailView: View {
                 HStack { Text("Template"); Spacer(); Text(record.templateName ?? "Custom") }
                 HStack { Text("Date"); Spacer(); Text(record.start.formatted(date: .abbreviated, time: .shortened)) }
                 HStack { Text("Duration"); Spacer(); Text(formatTimeInterval(record.duration)) }
-                HStack { Text("Total Volume"); Spacer(); Text(String(format: "%.0f kg", record.totalVolume)) }
+                HStack { Text("Total Volume"); Spacer(); Text(String(format: "%.0f", record.totalVolume)) }
             }
 
             Section("Exercises") {
@@ -90,11 +94,20 @@ struct WorkoutHistoryDetailView: View {
                         Text(ex.name).font(.headline)
 
                         ForEach(ex.sets) { s in
-                            VStack(alignment: .leading) {
-                                Text("Reps: \(s.reps) • Weight: \(String(format: \"%.1f\", s.weight))")
+                            VStack(alignment: .leading, spacing: 4) {
+                                // Safe numeric formatting using the `format:` interpolation to avoid nested quotes
+                                Text("Reps: \(s.reps)  •  Weight: \(s.weight, format: .number.precision(.fractionLength(1)))")
+                                    .font(.subheadline)
+
                                 if let hr = s.heartRateAtCompletion {
-                                    Text("HR: \(Int(hr)) bpm")
+                                    Text("HR: \(hr) bpm")
                                         .font(.caption)
+                                        .foregroundColor(.secondary)
+                                }
+
+                                if let completedAt = s.completedAt {
+                                    Text("Done: \(completedAt.formatted(date: .omitted, time: .shortened))")
+                                        .font(.caption2)
                                         .foregroundColor(.secondary)
                                 }
                             }
@@ -118,3 +131,4 @@ struct WorkoutHistoryDetailView: View {
         return String(format: "%02d:%02d", m, s)
     }
 }
+

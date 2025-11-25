@@ -6,20 +6,15 @@ struct HomeView: View {
     @EnvironmentObject var stepsStore: StepsStore
     @EnvironmentObject var sleepStore: SleepStore
     @EnvironmentObject var goalsStore: GoalsStore
+    @EnvironmentObject var templateStore: TemplateStore
 
     // State for workout start modal and navigation
     @State private var showStartSheet = false
     @State private var selectedTemplate: WorkoutTemplate? = nil
-    @State private var startWorkoutNow = false
-
-    // Example templates - replace with your real store
-    @State private var templates: [WorkoutTemplate] = [
-        WorkoutTemplate(name: "Push Day", exercises: ["Bench Press", "Shoulder Press"]),
-        WorkoutTemplate(name: "Leg Day", exercises: ["Squats", "Deadlifts"])
-    ]
+    @State private var showWorkoutSession = false
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
 
@@ -56,12 +51,7 @@ struct HomeView: View {
                             )
                     }
 
-                    // Navigation Link to open session
-                    NavigationLink(
-                        destination: WorkoutSessionView(template: selectedTemplate),
-                        isActive: $startWorkoutNow,
-                        label: { EmptyView() }
-                    ).hidden()
+
 
                     // Quick Add Buttons
                     HStack(spacing: 12) {
@@ -86,25 +76,41 @@ struct HomeView: View {
                         .frame(height: 120)
                         .overlay(Text("Live Heart Rate Coming Soon"))
 
-                    RoundedRectangle(cornerRadius: 12)
-                        .stroke()
-                        .frame(height: 120)
-                        .overlay(Text("Recent Workout Summary"))
+                    NavigationLink(destination: AIInsightsView()) {
+                        RoundedRectangle(cornerRadius: 12)
+                            .stroke()
+                            .frame(height: 120)
+                            .overlay(
+                                VStack {
+                                    Image(systemName: "chart.line.uptrend.xyaxis")
+                                        .font(.title2)
+                                    Text("AI Insights")
+                                        .font(.headline)
+                                }
+                            )
+                    }
 
-                    RoundedRectangle(cornerRadius: 12)
-                        .stroke()
-                        .frame(height: 120)
-                        .overlay(Text("AI Insight Coming Soon"))
                 }
                 .padding()
                 .navigationTitle("Home")
             }
         }
         .sheet(isPresented: $showStartSheet) {
-            WorkoutStartSheet(templates: templates) { chosenTemplate in
+            WorkoutStartSheet(templates: templateStore.templates.map { template in
+                WorkoutTemplate(name: template.name, exercises: template.exercises.map { $0.name })
+            }) { chosenTemplate in
                 selectedTemplate = chosenTemplate
-                startWorkoutNow = true
                 showStartSheet = false
+                showWorkoutSession = true
+            }
+        }
+        .fullScreenCover(isPresented: $showWorkoutSession) {
+            NavigationView {
+                if let template = selectedTemplate {
+                    WorkoutSessionView(template: template)
+                } else {
+                    WorkoutSessionView()
+                }
             }
         }
     }
@@ -161,3 +167,4 @@ struct DailyTile: View {
         .background(RoundedRectangle(cornerRadius: 12).opacity(0.03))
     }
 }
+

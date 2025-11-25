@@ -38,11 +38,11 @@ struct WorkoutMenuView: View {
 
                 Button(action: {
                     // Continue: check unfinished
-                    if let _ = workoutStore.workouts.first(where: { $0.notes == "unfinished" }) {
+                    if workoutStore.workouts.contains(where: { $0.notes == "unfinished" }) {
                         showingContinueConfirm = true
                     } else {
-                        // nothing to continue
-                        showingContinueConfirm = true
+                        // nothing to continue - could show alert here
+                        return
                     }
                 }) {
                     HStack {
@@ -59,10 +59,19 @@ struct WorkoutMenuView: View {
                     Alert(title: Text("Resume unfinished workout?"),
                           message: Text("Resume or Delete the unfinished workout."),
                           primaryButton: .default(Text("Resume")) {
-                            // TODO: resume action
+                            if let unfinished = workoutStore.workouts.first(where: { $0.notes == "unfinished" }) {
+                                // Navigate to workout session with unfinished workout
+                                // This would require passing the workout to WorkoutSessionView
+                                // For now, just remove the "unfinished" note
+                                var updated = unfinished
+                                updated.notes = nil
+                                workoutStore.update(updated)
+                            }
                           },
                           secondaryButton: .destructive(Text("Delete")) {
-                            // TODO: delete action
+                            if let unfinished = workoutStore.workouts.first(where: { $0.notes == "unfinished" }) {
+                                workoutStore.delete(id: unfinished.id)
+                            }
                           })
                 }
 
