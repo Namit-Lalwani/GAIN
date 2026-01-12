@@ -21,6 +21,12 @@ struct MainTabView: View {
                     Text("Workout")
                 }
 
+            BodyMapView()
+                .tabItem {
+                    Image(systemName: "figure.arms.open")
+                    Text("Body")
+                }
+
             HistoryView()
                 .tabItem {
                     Image(systemName: "clock")

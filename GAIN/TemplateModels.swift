@@ -8,7 +8,7 @@ struct TemplateModel: Identifiable, Codable {
     var name: String
     var exercises: [Exercise] // Exercise contains planned RepSet items
 
-    init(id: UUID = UUID(), name: String = "New Template", exercises: [Exercise] = []) {
+    init(id: UUID = UUID(), name: String = "New Routine", exercises: [Exercise] = []) {
         self.id = id
         self.name = name
         self.exercises = exercises

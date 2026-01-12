@@ -1,87 +1,21 @@
 import Foundation
-import WatchConnectivity
 import Combine
 import UIKit
 
-
 @MainActor
-public class iPhoneSessionReceiver: NSObject, ObservableObject, WCSessionDelegate {
+public class iPhoneSessionReceiver: NSObject, ObservableObject {
     public static let shared = iPhoneSessionReceiver()
 
-    private var session: WCSession?
     private var pendingPackets: [[String: Any]] = []
     private var isProcessingQueue = false
-
-    @Published public var isReachable: Bool = false
-    @Published public var activationState: WCSessionActivationState = .notActivated
 
     // Replace with your real backend endpoint
     private let ingestURLString = "https://YOUR_BACKEND_DOMAIN/api/sessions/ingest"
 
     private override init() {
         super.init()
-        if WCSession.isSupported() {
-            session = WCSession.default
-            session?.delegate = self
-            session?.activate()
-            self.activationState = session?.activationState ?? .notActivated
-            self.isReachable = session?.isReachable ?? false
-        }
         // try to flush any previously pending packets (if persisted)
         Task { await processQueueIfNeeded() }
-    }
-
-    // MARK: - WCSessionDelegate
-
-    public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        Task { @MainActor in
-            self.activationState = activationState
-            self.isReachable = session.isReachable
-        }
-        if let e = error { print("WC activation error (iPhone):", e) }
-        Task { await processQueueIfNeeded() }
-    }
-
-    public func sessionDidBecomeInactive(_ session: WCSession) {
-        // handle transition if necessary
-    }
-
-    public func sessionDidDeactivate(_ session: WCSession) {
-        // If needed: session.activate() on the new session
-        // For iPhone typically re-activate: session.activate()
-        session.activate()
-    }
-
-    // Basic message receiver (no reply)
-    public func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        print("iPhone received message:", message)
-        enqueuePacket(message)
-    }
-
-    // Message receiver with optional reply handler
-    public func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        print("iPhone received message with replyHandler:", message)
-        enqueuePacket(message)
-        // quick ack
-        replyHandler(["ok": true])
-    }
-
-    // userInfo (background transfer) — useful for larger batches
-    public func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
-        print("iPhone received userInfo:", userInfo)
-        enqueuePacket(userInfo)
-    }
-
-    // file or data transfers handled elsewhere if used
-
-    // reachability changed
-    public func session(_ session: WCSession, reachabilityDidChange isReachable: Bool) {
-        Task { @MainActor in
-            self.isReachable = isReachable
-        }
-        if isReachable {
-            Task { await processQueueIfNeeded() }
-        }
     }
 
     // MARK: - Queue + backend forwarding
@@ -127,10 +61,7 @@ public class iPhoneSessionReceiver: NSObject, ObservableObject, WCSessionDelegat
         restorePendingPackets()
 
         while !pendingPackets.isEmpty {
-            if !(session?.isReachable ?? false) {
-                // if watch is offline, still try to forward to backend (phone may have network)
-                // but if phone has no network, persist queue and stop
-            }
+            // Process packets and forward to backend
             guard let packet = pendingPackets.first else {
                 // Array became empty between check and access (race condition)
                 break
@@ -175,5 +106,3 @@ public class iPhoneSessionReceiver: NSObject, ObservableObject, WCSessionDelegat
         }
     }
 }
-
-

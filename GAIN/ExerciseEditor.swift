@@ -7,6 +7,8 @@ struct ExerciseEditor: View {
     var onSave: (Exercise) -> Void
     var onDelete: () -> Void
 
+    @State private var muscleGroupsText: String = ""
+
     private let nf: NumberFormatter = {
         let f = NumberFormatter()
         f.numberStyle = .decimal
@@ -21,27 +23,18 @@ struct ExerciseEditor: View {
                 TextField("Exercise name", text: $exercise.name)
             }
 
-            // Sets
+            Section(header: Text("Muscle Groups (tags)")) {
+                TextField("e.g. chest, triceps, push", text: $muscleGroupsText)
+                    .autocapitalization(.none)
+                    .disableAutocorrection(true)
+            }
+
+            // Sets (count only; reps/weight are decided during live workout)
             Section(header: Text("Sets")) {
                 ForEach(exercise.sets.indices, id: \.self) { sidx in
                     HStack {
-                        Stepper("Reps: \(exercise.sets[sidx].reps)",
-                                value: $exercise.sets[sidx].reps,
-                                in: 0...100)
-
+                        Text("Set \(sidx + 1)")
                         Spacer()
-
-                        TextField(
-                            "Weight",
-                            value: Binding(
-                                get: { exercise.sets[sidx].weight ?? 0 },
-                                set: { exercise.sets[sidx].weight = $0 == 0 ? nil : $0 }
-                            ),
-                            formatter: nf
-                        )
-                        .keyboardType(.decimalPad)
-                        .frame(width: 80)
-
                         Button {
                             exercise.sets.remove(at: sidx)
                         } label: {
@@ -61,6 +54,11 @@ struct ExerciseEditor: View {
             // Save / Delete
             Section {
                 Button("Save Exercise") {
+                    let tags = muscleGroupsText
+                        .split(separator: ",")
+                        .map { $0.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() }
+                        .filter { !$0.isEmpty }
+                    exercise.muscleGroups = tags.isEmpty ? nil : tags
                     onSave(exercise)
                     presentationMode.wrappedValue.dismiss()
                 }
@@ -74,6 +72,11 @@ struct ExerciseEditor: View {
             }
         }
         .navigationTitle(exercise.name)
+        .onAppear {
+            if let groups = exercise.muscleGroups {
+                muscleGroupsText = groups.joined(separator: ", ")
+            }
+        }
     }
 
     private func addSet() {

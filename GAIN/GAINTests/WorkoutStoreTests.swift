@@ -1,19 +1,20 @@
 import XCTest
 @testable import GAIN
 
+@MainActor
 final class WorkoutStoreTests: XCTestCase {
     
     var store: WorkoutStore!
     
-    override func setUp() {
-        super.setUp()
+    override func setUp() async throws {
+        try await super.setUp()
         // Use a test instance or mock
         store = WorkoutStore.shared
     }
     
-    override func tearDown() {
+    override func tearDown() async throws {
         store = nil
-        super.tearDown()
+        try await super.tearDown()
     }
     
     // MARK: - ADD_WORKOUT Test

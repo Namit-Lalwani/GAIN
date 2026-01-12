@@ -1,0 +1,4196 @@
+[
+  {
+    "name": "Bench Press",
+    "primaryMuscles": [
+      "Chest"
+    ],
+    "secondaryMuscles": [
+      "Triceps",
+      "Shoulders"
+    ],
+    "equipment": [
+      "Barbell",
+      "Bench"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Chest": {
+        "heads": [
+          "Clavicular (Upper)",
+          "Sternocostal (Middle)",
+          "Costal (Lower)"
+        ],
+        "targetingDistribution": {
+          "Clavicular (Upper)": "20%",
+          "Sternocostal (Middle)": "70%",
+          "Costal (Lower)": "10%"
+        },
+        "description": "Flat bench press emphasizes the middle chest fibers from the sternum, with secondary emphasis on upper pecs."
+      }
+    }
+  },
+  {
+    "name": "Incline Bench Press",
+    "primaryMuscles": [
+      "Upper Chest"
+    ],
+    "secondaryMuscles": [
+      "Triceps",
+      "Shoulders"
+    ],
+    "equipment": [
+      "Barbell",
+      "Incline Bench"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Chest": {
+        "heads": [
+          "Clavicular (Upper)",
+          "Sternocostal (Middle)",
+          "Costal (Lower)"
+        ],
+        "targetingDistribution": {
+          "Clavicular (Upper)": "55%",
+          "Sternocostal (Middle)": "40%",
+          "Costal (Lower)": "5%"
+        },
+        "description": "Incline angle (30-45 degrees) preferentially targets the clavicular head of chest originating from the clavicle. Minimal lower chest involvement."
+      }
+    }
+  },
+  {
+    "name": "Decline Bench Press",
+    "primaryMuscles": [
+      "Lower Chest"
+    ],
+    "secondaryMuscles": [
+      "Triceps",
+      "Shoulders"
+    ],
+    "equipment": [
+      "Barbell",
+      "Decline Bench"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Chest": {
+        "heads": [
+          "Clavicular (Upper)",
+          "Sternocostal (Middle)",
+          "Costal (Lower)"
+        ],
+        "targetingDistribution": {
+          "Clavicular (Upper)": "5%",
+          "Sternocostal (Middle)": "30%",
+          "Costal (Lower)": "65%"
+        },
+        "description": "Decline angle increases stretch on pectoralis major and heavily emphasizes lower chest sternocostal and costal heads."
+      }
+    }
+  },
+  {
+    "name": "Dumbbell Bench Press",
+    "primaryMuscles": [
+      "Chest"
+    ],
+    "secondaryMuscles": [
+      "Triceps",
+      "Shoulders"
+    ],
+    "equipment": [
+      "Dumbbells",
+      "Bench"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Chest": {
+        "heads": [
+          "Clavicular (Upper)",
+          "Sternocostal (Middle)",
+          "Costal (Lower)"
+        ],
+        "targetingDistribution": {
+          "Clavicular (Upper)": "25%",
+          "Sternocostal (Middle)": "65%",
+          "Costal (Lower)": "10%"
+        },
+        "description": "Similar to barbell bench with greater range of motion. Allows individual arm control and slightly greater stretch."
+      }
+    }
+  },
+  {
+    "name": "Incline Dumbbell Press",
+    "primaryMuscles": [
+      "Upper Chest"
+    ],
+    "secondaryMuscles": [
+      "Triceps",
+      "Shoulders"
+    ],
+    "equipment": [
+      "Dumbbells",
+      "Incline Bench"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Chest": {
+        "heads": [
+          "Clavicular (Upper)",
+          "Sternocostal (Middle)",
+          "Costal (Lower)"
+        ],
+        "targetingDistribution": {
+          "Clavicular (Upper)": "60%",
+          "Sternocostal (Middle)": "35%",
+          "Costal (Lower)": "5%"
+        },
+        "description": "Greater ROM in dumbbells creates superior upper chest activation. Excellent for clavicular head development."
+      }
+    }
+  },
+  {
+    "name": "Machine Fly (Pec Deck)",
+    "primaryMuscles": [
+      "Chest"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Chest": {
+        "heads": [
+          "Clavicular (Upper)",
+          "Sternocostal (Middle)",
+          "Costal (Lower)"
+        ],
+        "targetingDistribution": {
+          "Clavicular (Upper)": "20%",
+          "Sternocostal (Middle)": "70%",
+          "Costal (Lower)": "10%"
+        },
+        "description": "Machine fly emphasizes sternocostal (middle) head. Seat height adjustment can target upper (lower seat) or lower (raised seat) chest."
+      }
+    }
+  },
+  {
+    "name": "Cable Fly",
+    "primaryMuscles": [
+      "Chest"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Chest": {
+        "heads": [
+          "Clavicular (Upper)",
+          "Sternocostal (Middle)",
+          "Costal (Lower)"
+        ],
+        "targetingDistribution": {
+          "Clavicular (Upper)": "Varies with cable height",
+          "Sternocostal (Middle)": "60-70%",
+          "Costal (Lower)": "Varies with cable height"
+        },
+        "description": "Cable height determines head emphasis: high-to-low targets lower chest, low-to-high targets upper chest, mid-level targets middle chest."
+      }
+    }
+  },
+  {
+    "name": "Push-Ups",
+    "primaryMuscles": [
+      "Chest"
+    ],
+    "secondaryMuscles": [
+      "Triceps",
+      "Shoulders"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "category": "Calisthenics",
+    "muscleHeadTargeting": {
+      "Chest": {
+        "heads": [
+          "Clavicular (Upper)",
+          "Sternocostal (Middle)",
+          "Costal (Lower)"
+        ],
+        "targetingDistribution": {
+          "Clavicular (Upper)": "20%",
+          "Sternocostal (Middle)": "70%",
+          "Costal (Lower)": "10%"
+        },
+        "description": "Standard push-ups approximate flat bench activation patterns, emphasizing middle chest."
+      }
+    }
+  },
+  {
+    "name": "Squat",
+    "primaryMuscles": [
+      "Quadriceps",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Hamstrings",
+      "Core"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Quadriceps": {
+        "heads": [
+          "Rectus Femoris",
+          "Vastus Lateralis",
+          "Vastus Medialis",
+          "Vastus Intermedius"
+        ],
+        "targetingDistribution": {
+          "Rectus Femoris": "25%",
+          "Vastus Lateralis": "30%",
+          "Vastus Medialis": "30%",
+          "Vastus Intermedius": "15%"
+        },
+        "description": "Back squat distributes load across all quad heads evenly. Upright torso increases quad demand vs hip-dominant loading."
+      },
+      "Glutes": {
+        "heads": [
+          "Gluteus Maximus",
+          "Gluteus Medius",
+          "Gluteus Minimus"
+        ],
+        "targetingDistribution": {
+          "Gluteus Maximus": "85%",
+          "Gluteus Medius": "10%",
+          "Gluteus Minimus": "5%"
+        },
+        "description": "Hip extension motion primarily targets maximus. Medius and minimus provide stabilization."
+      }
+    }
+  },
+  {
+    "name": "Barbell Squat",
+    "primaryMuscles": [
+      "Quadriceps",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Hamstrings",
+      "Core"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Quadriceps": {
+        "heads": [
+          "Rectus Femoris",
+          "Vastus Lateralis",
+          "Vastus Medialis",
+          "Vastus Intermedius"
+        ],
+        "targetingDistribution": {
+          "Rectus Femoris": "25%",
+          "Vastus Lateralis": "30%",
+          "Vastus Medialis": "30%",
+          "Vastus Intermedius": "15%"
+        },
+        "description": "Standard back squat with balanced quad activation across all four heads."
+      },
+      "Glutes": {
+        "heads": [
+          "Gluteus Maximus",
+          "Gluteus Medius",
+          "Gluteus Minimus"
+        ],
+        "targetingDistribution": {
+          "Gluteus Maximus": "85%",
+          "Gluteus Medius": "10%",
+          "Gluteus Minimus": "5%"
+        },
+        "description": "Primary hip extensor engagement with stabilizer support."
+      }
+    }
+  },
+  {
+    "name": "Front Squat",
+    "primaryMuscles": [
+      "Quadriceps"
+    ],
+    "secondaryMuscles": [
+      "Glutes",
+      "Core"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Quadriceps": {
+        "heads": [
+          "Rectus Femoris",
+          "Vastus Lateralis",
+          "Vastus Medialis",
+          "Vastus Intermedius"
+        ],
+        "targetingDistribution": {
+          "Rectus Femoris": "35%",
+          "Vastus Lateralis": "25%",
+          "Vastus Medialis": "25%",
+          "Vastus Intermedius": "15%"
+        },
+        "description": "Upright torso position and anterior bar placement shift load toward quadriceps. Rectus femoris receives greatest emphasis due to hip flexion component."
+      }
+    }
+  },
+  {
+    "name": "Hack Squat",
+    "primaryMuscles": [
+      "Quadriceps"
+    ],
+    "secondaryMuscles": [
+      "Glutes"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Quadriceps": {
+        "heads": [
+          "Rectus Femoris",
+          "Vastus Lateralis",
+          "Vastus Medialis",
+          "Vastus Intermedius"
+        ],
+        "targetingDistribution": {
+          "Rectus Femoris": "30%",
+          "Vastus Lateralis": "35%",
+          "Vastus Medialis": "25%",
+          "Vastus Intermedius": "10%"
+        },
+        "description": "Machine provides guided path emphasizing vastus lateralis (outer quad) and vasti muscles more than free weight squats."
+      }
+    }
+  },
+  {
+    "name": "Leg Press",
+    "primaryMuscles": [
+      "Quadriceps",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Hamstrings"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Quadriceps": {
+        "heads": [
+          "Rectus Femoris",
+          "Vastus Lateralis",
+          "Vastus Medialis",
+          "Vastus Intermedius"
+        ],
+        "targetingDistribution": {
+          "Rectus Femoris": "20%",
+          "Vastus Lateralis": "35%",
+          "Vastus Medialis": "35%",
+          "Vastus Intermedius": "10%"
+        },
+        "description": "Seated hip flexion reduces rectus femoris involvement. Vastus medialis and lateralis bear most load. VI activation varies with knee angle (higher in flexion)."
+      }
+    }
+  },
+  {
+    "name": "Bulgarian Split Squat",
+    "primaryMuscles": [
+      "Quadriceps",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Hamstrings"
+    ],
+    "equipment": [
+      "Dumbbells",
+      "Bench"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Quadriceps": {
+        "heads": [
+          "Rectus Femoris",
+          "Vastus Lateralis",
+          "Vastus Medialis",
+          "Vastus Intermedius"
+        ],
+        "targetingDistribution": {
+          "Rectus Femoris": "30%",
+          "Vastus Lateralis": "28%",
+          "Vastus Medialis": "28%",
+          "Vastus Intermedius": "14%"
+        },
+        "description": "Single-leg stance with hip extension increases rectus femoris activation. Requires greater stabilizer recruitment."
+      }
+    }
+  },
+  {
+    "name": "Leg Extension",
+    "primaryMuscles": [
+      "Quadriceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Quadriceps": {
+        "heads": [
+          "Rectus Femoris",
+          "Vastus Lateralis",
+          "Vastus Medialis",
+          "Vastus Intermedius"
+        ],
+        "targetingDistribution": {
+          "Rectus Femoris": "25%",
+          "Vastus Lateralis": "30%",
+          "Vastus Medialis": "30%",
+          "Vastus Intermedius": "15%"
+        },
+        "description": "Pure knee extension equally activates all quad heads. VI activation higher at knee-flexed positions."
+      }
+    }
+  },
+  {
+    "name": "Single Leg Extension",
+    "primaryMuscles": [
+      "Quadriceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Quadriceps": {
+        "heads": [
+          "Rectus Femoris",
+          "Vastus Lateralis",
+          "Vastus Medialis",
+          "Vastus Intermedius"
+        ],
+        "targetingDistribution": {
+          "Rectus Femoris": "25%",
+          "Vastus Lateralis": "30%",
+          "Vastus Medialis": "30%",
+          "Vastus Intermedius": "15%"
+        },
+        "description": "Single-leg variation increases stabilization demands and balance component. Activation pattern similar to bilateral leg extension."
+      }
+    }
+  },
+  {
+    "name": "Leg Curl",
+    "primaryMuscles": [
+      "Hamstrings"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Hamstrings": {
+        "heads": [
+          "Biceps Femoris (Long Head)",
+          "Biceps Femoris (Short Head)",
+          "Semitendinosus",
+          "Semimembranosus"
+        ],
+        "targetingDistribution": {
+          "Biceps Femoris (Long Head)": "30%",
+          "Biceps Femoris (Short Head)": "15%",
+          "Semitendinosus": "35%",
+          "Semimembranosus": "20%"
+        },
+        "description": "Lying leg curl targets all hamstring heads evenly since knee flexion doesn't require hip involvement. Semitendinosus shows highest activation."
+      }
+    }
+  },
+  {
+    "name": "Seated Leg Curl",
+    "primaryMuscles": [
+      "Hamstrings"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Hamstrings": {
+        "heads": [
+          "Biceps Femoris (Long Head)",
+          "Biceps Femoris (Short Head)",
+          "Semitendinosus",
+          "Semimembranosus"
+        ],
+        "targetingDistribution": {
+          "Biceps Femoris (Long Head)": "30%",
+          "Biceps Femoris (Short Head)": "15%",
+          "Semitendinosus": "35%",
+          "Semimembranosus": "20%"
+        },
+        "description": "Seated position similar activation to lying curl. Slightly different lever arm may alter emphasis marginally."
+      }
+    }
+  },
+  {
+    "name": "Deadlift",
+    "primaryMuscles": [
+      "Back",
+      "Hamstrings",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Core",
+      "Traps"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Hamstrings": {
+        "heads": [
+          "Biceps Femoris (Long Head)",
+          "Biceps Femoris (Short Head)",
+          "Semitendinosus",
+          "Semimembranosus"
+        ],
+        "targetingDistribution": {
+          "Biceps Femoris (Long Head)": "40%",
+          "Biceps Femoris (Short Head)": "10%",
+          "Semitendinosus": "35%",
+          "Semimembranosus": "15%"
+        },
+        "description": "Hip extension and knee flexion heavily emphasize long head of biceps femoris and semitendinosus. Short head less involved in hip-hinge movement."
+      },
+      "Glutes": {
+        "heads": [
+          "Gluteus Maximus",
+          "Gluteus Medius",
+          "Gluteus Minimus"
+        ],
+        "targetingDistribution": {
+          "Gluteus Maximus": "90%",
+          "Gluteus Medius": "7%",
+          "Gluteus Minimus": "3%"
+        },
+        "description": "Primary hip extensor. Deadlift heavily loads glute maximus across full range."
+      }
+    }
+  },
+  {
+    "name": "Romanian Deadlift",
+    "primaryMuscles": [
+      "Hamstrings",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Lower Back"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Hamstrings": {
+        "heads": [
+          "Biceps Femoris (Long Head)",
+          "Biceps Femoris (Short Head)",
+          "Semitendinosus",
+          "Semimembranosus"
+        ],
+        "targetingDistribution": {
+          "Biceps Femoris (Long Head)": "50%",
+          "Biceps Femoris (Short Head)": "5%",
+          "Semitendinosus": "35%",
+          "Semimembranosus": "10%"
+        },
+        "description": "RDL emphasis on hip hinge maximizes long head activation. Constant tension on posterior chain throughout movement."
+      }
+    }
+  },
+  {
+    "name": "Sumo Deadlift",
+    "primaryMuscles": [
+      "Hamstrings",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Adductors",
+      "Back"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Hamstrings": {
+        "heads": [
+          "Biceps Femoris (Long Head)",
+          "Biceps Femoris (Short Head)",
+          "Semitendinosus",
+          "Semimembranosus"
+        ],
+        "targetingDistribution": {
+          "Biceps Femoris (Long Head)": "45%",
+          "Biceps Femoris (Short Head)": "10%",
+          "Semitendinosus": "30%",
+          "Semimembranosus": "15%"
+        },
+        "description": "Wide stance reduces hamstring emphasis vs conventional deadlift. Greater adductor involvement shifts some load from hamstrings to inner thigh."
+      }
+    }
+  },
+  {
+    "name": "Standing Calf Raise",
+    "primaryMuscles": [
+      "Calves"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Calves": {
+        "heads": [
+          "Gastrocnemius",
+          "Soleus"
+        ],
+        "targetingDistribution": {
+          "Gastrocnemius": "70%",
+          "Soleus": "30%"
+        },
+        "description": "Standing position with extended knees primarily targets gastrocnemius (two-headed calf muscle). Soleus contributes minimally."
+      }
+    }
+  },
+  {
+    "name": "Seated Calf Raise",
+    "primaryMuscles": [
+      "Calves"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Calves": {
+        "heads": [
+          "Gastrocnemius",
+          "Soleus"
+        ],
+        "targetingDistribution": {
+          "Gastrocnemius": "15%",
+          "Soleus": "85%"
+        },
+        "description": "Seated position with bent knees removes gastrocnemius from equation. Soleus becomes primary mover, targeting the deeper calf muscle."
+      }
+    }
+  },
+  {
+    "name": "Pull-Up",
+    "primaryMuscles": [
+      "Lats",
+      "Back"
+    ],
+    "secondaryMuscles": [
+      "Biceps",
+      "Forearms"
+    ],
+    "equipment": [
+      "Pull-up Bar"
+    ],
+    "category": "Calisthenics",
+    "muscleHeadTargeting": {
+      "Lats": {
+        "heads": [
+          "Upper Lat",
+          "Middle Lat",
+          "Lower Lat"
+        ],
+        "targetingDistribution": {
+          "Upper Lat": "20%",
+          "Middle Lat": "50%",
+          "Lower Lat": "30%"
+        },
+        "description": "Wide grip pull-ups emphasize middle and upper lats. Narrow grip increases lower lat and bicep involvement. Grip width significantly alters emphasis."
+      }
+    }
+  },
+  {
+    "name": "Chin-Up",
+    "primaryMuscles": [
+      "Lats",
+      "Biceps"
+    ],
+    "secondaryMuscles": [
+      "Back"
+    ],
+    "equipment": [
+      "Pull-up Bar"
+    ],
+    "category": "Calisthenics",
+    "muscleHeadTargeting": {
+      "Biceps": {
+        "heads": [
+          "Long Head",
+          "Short Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "55%",
+          "Short Head": "45%"
+        },
+        "description": "Underhand grip supinated position increases bicep involvement compared to pull-ups. Balanced activation of both bicep heads."
+      },
+      "Lats": {
+        "heads": [
+          "Upper Lat",
+          "Middle Lat",
+          "Lower Lat"
+        ],
+        "targetingDistribution": {
+          "Upper Lat": "15%",
+          "Middle Lat": "45%",
+          "Lower Lat": "40%"
+        },
+        "description": "Narrower grip increases lower lat and medial lat engagement vs wide-grip pull-ups."
+      }
+    }
+  },
+  {
+    "name": "Lat Pulldown",
+    "primaryMuscles": [
+      "Lats"
+    ],
+    "secondaryMuscles": [
+      "Biceps",
+      "Rear Delts"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Lats": {
+        "heads": [
+          "Upper Lat",
+          "Middle Lat",
+          "Lower Lat"
+        ],
+        "targetingDistribution": {
+          "Upper Lat": "25%",
+          "Middle Lat": "55%",
+          "Lower Lat": "20%"
+        },
+        "description": "Wide grip emphasizes outer/middle lats. Medium or narrow grip increases lower lat and bicep activation. Pronated grip shows superior lat activation vs supinated."
+      }
+    }
+  },
+  {
+    "name": "One Arm Inclined Cable Lat Pulldown",
+    "primaryMuscles": [
+      "Lats"
+    ],
+    "secondaryMuscles": [
+      "Biceps"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Lats": {
+        "heads": [
+          "Upper Lat",
+          "Middle Lat",
+          "Lower Lat"
+        ],
+        "targetingDistribution": {
+          "Upper Lat": "20%",
+          "Middle Lat": "50%",
+          "Lower Lat": "30%"
+        },
+        "description": "Unilateral single-arm work with incline position targets middle to upper lat fibers. Increased core stabilization requirement."
+      }
+    }
+  },
+  {
+    "name": "Barbell Row",
+    "primaryMuscles": [
+      "Back",
+      "Lats"
+    ],
+    "secondaryMuscles": [
+      "Biceps",
+      "Rear Delts"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Lats": {
+        "heads": [
+          "Upper Lat",
+          "Middle Lat",
+          "Lower Lat"
+        ],
+        "targetingDistribution": {
+          "Upper Lat": "15%",
+          "Middle Lat": "60%",
+          "Lower Lat": "25%"
+        },
+        "description": "Bend-over barbell row heavily emphasizes middle lat fibers and entire back. Horizontal pulling pattern targets lat width."
+      }
+    }
+  },
+  {
+    "name": "Dumbbell Row",
+    "primaryMuscles": [
+      "Back",
+      "Lats"
+    ],
+    "secondaryMuscles": [
+      "Biceps",
+      "Rear Delts"
+    ],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Lats": {
+        "heads": [
+          "Upper Lat",
+          "Middle Lat",
+          "Lower Lat"
+        ],
+        "targetingDistribution": {
+          "Upper Lat": "15%",
+          "Middle Lat": "60%",
+          "Lower Lat": "25%"
+        },
+        "description": "Similar to barbell rows with greater range of motion. Individual arm control allows each side independent development."
+      }
+    }
+  },
+  {
+    "name": "One Arm Dumbbell Row",
+    "primaryMuscles": [
+      "Lats",
+      "Back"
+    ],
+    "secondaryMuscles": [
+      "Biceps"
+    ],
+    "equipment": [
+      "Dumbbell",
+      "Bench"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Lats": {
+        "heads": [
+          "Upper Lat",
+          "Middle Lat",
+          "Lower Lat"
+        ],
+        "targetingDistribution": {
+          "Upper Lat": "15%",
+          "Middle Lat": "55%",
+          "Lower Lat": "30%"
+        },
+        "description": "Unilateral movement increases lower lat involvement due to scapular mechanics. Excellent for addressing muscle imbalances."
+      }
+    }
+  },
+  {
+    "name": "Seated Cable Row",
+    "primaryMuscles": [
+      "Back",
+      "Lats"
+    ],
+    "secondaryMuscles": [
+      "Biceps",
+      "Rear Delts"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Lats": {
+        "heads": [
+          "Upper Lat",
+          "Middle Lat",
+          "Lower Lat"
+        ],
+        "targetingDistribution": {
+          "Upper Lat": "15%",
+          "Middle Lat": "65%",
+          "Lower Lat": "20%"
+        },
+        "description": "Seated position reduces core involvement. Middle lat emphasis with some upper trap and middle back co-activation."
+      }
+    }
+  },
+  {
+    "name": "Chest Supported Row",
+    "primaryMuscles": [
+      "Back",
+      "Lats"
+    ],
+    "secondaryMuscles": [
+      "Biceps"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Lats": {
+        "heads": [
+          "Upper Lat",
+          "Middle Lat",
+          "Lower Lat"
+        ],
+        "targetingDistribution": {
+          "Upper Lat": "15%",
+          "Middle Lat": "70%",
+          "Lower Lat": "15%"
+        },
+        "description": "Chest support eliminates lower back strain. Focuses maximal tension on lats and middle back. Minimal leg drive compensation."
+      }
+    }
+  },
+  {
+    "name": "T-Bar Row",
+    "primaryMuscles": [
+      "Back",
+      "Lats"
+    ],
+    "secondaryMuscles": [
+      "Biceps",
+      "Traps"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Lats": {
+        "heads": [
+          "Upper Lat",
+          "Middle Lat",
+          "Lower Lat"
+        ],
+        "targetingDistribution": {
+          "Upper Lat": "15%",
+          "Middle Lat": "65%",
+          "Lower Lat": "20%"
+        },
+        "description": "Angled torso position targets entire back with emphasis on lat middle fibers. Greater upper back and trap involvement vs flat-back rows."
+      }
+    }
+  },
+  {
+    "name": "Face Pull",
+    "primaryMuscles": [
+      "Rear Delts",
+      "Traps"
+    ],
+    "secondaryMuscles": [
+      "Upper Back"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Deltoids": {
+        "heads": [
+          "Anterior Deltoid",
+          "Medial Deltoid",
+          "Posterior Deltoid"
+        ],
+        "targetingDistribution": {
+          "Anterior Deltoid": "5%",
+          "Medial Deltoid": "20%",
+          "Posterior Deltoid": "75%"
+        },
+        "description": "Face pulls exclusively target posterior deltoids. High rope position and external rotation emphasis maximizes rear delt isolation while protecting shoulders."
+      }
+    }
+  },
+  {
+    "name": "Reverse Pec Deck",
+    "primaryMuscles": [
+      "Rear Delts"
+    ],
+    "secondaryMuscles": [
+      "Upper Back"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Deltoids": {
+        "heads": [
+          "Anterior Deltoid",
+          "Medial Deltoid",
+          "Posterior Deltoid"
+        ],
+        "targetingDistribution": {
+          "Anterior Deltoid": "3%",
+          "Medial Deltoid": "15%",
+          "Posterior Deltoid": "82%"
+        },
+        "description": "Machine-guided path provides maximum posterior deltoid isolation. Highest EMG activation for rear delts among all exercises."
+      }
+    }
+  },
+  {
+    "name": "Overhead Press",
+    "primaryMuscles": [
+      "Shoulders"
+    ],
+    "secondaryMuscles": [
+      "Triceps",
+      "Upper Chest"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Deltoids": {
+        "heads": [
+          "Anterior Deltoid",
+          "Medial Deltoid",
+          "Posterior Deltoid"
+        ],
+        "targetingDistribution": {
+          "Anterior Deltoid": "60%",
+          "Medial Deltoid": "35%",
+          "Posterior Deltoid": "5%"
+        },
+        "description": "Overhead pressing pattern heavily emphasizes anterior deltoids. Significant medial delt activation. Barbell allows heavier loading than dumbbells."
+      }
+    }
+  },
+  {
+    "name": "Shoulder Press",
+    "primaryMuscles": [
+      "Shoulders"
+    ],
+    "secondaryMuscles": [
+      "Triceps"
+    ],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Deltoids": {
+        "heads": [
+          "Anterior Deltoid",
+          "Medial Deltoid",
+          "Posterior Deltoid"
+        ],
+        "targetingDistribution": {
+          "Anterior Deltoid": "58%",
+          "Medial Deltoid": "35%",
+          "Posterior Deltoid": "7%"
+        },
+        "description": "Dumbbell version provides greater ROM and individual arm control. Similar emphasis as barbell with more scapular freedom."
+      }
+    }
+  },
+  {
+    "name": "Dumbbell Shoulder Press",
+    "primaryMuscles": [
+      "Shoulders"
+    ],
+    "secondaryMuscles": [
+      "Triceps"
+    ],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Deltoids": {
+        "heads": [
+          "Anterior Deltoid",
+          "Medial Deltoid",
+          "Posterior Deltoid"
+        ],
+        "targetingDistribution": {
+          "Anterior Deltoid": "58%",
+          "Medial Deltoid": "35%",
+          "Posterior Deltoid": "7%"
+        },
+        "description": "Standard dumbbell shoulder press emphasizes anterior deltoids in pressing motion. Medial delts assist in abduction."
+      }
+    }
+  },
+  {
+    "name": "Arnold Press",
+    "primaryMuscles": [
+      "Shoulders"
+    ],
+    "secondaryMuscles": [
+      "Triceps"
+    ],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Deltoids": {
+        "heads": [
+          "Anterior Deltoid",
+          "Medial Deltoid",
+          "Posterior Deltoid"
+        ],
+        "targetingDistribution": {
+          "Anterior Deltoid": "50%",
+          "Medial Deltoid": "40%",
+          "Posterior Deltoid": "10%"
+        },
+        "description": "Rotational movement pattern provides greater medial delt emphasis. Increased range of motion allows superior hypertrophy potential."
+      }
+    }
+  },
+  {
+    "name": "Lateral Raise",
+    "primaryMuscles": [
+      "Side Delts"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Deltoids": {
+        "heads": [
+          "Anterior Deltoid",
+          "Medial Deltoid",
+          "Posterior Deltoid"
+        ],
+        "targetingDistribution": {
+          "Anterior Deltoid": "20%",
+          "Medial Deltoid": "75%",
+          "Posterior Deltoid": "5%"
+        },
+        "description": "Pure abduction movement isolates medial deltoids. Highest activation for building shoulder width and medial delt development."
+      }
+    }
+  },
+  {
+    "name": "Front Raise",
+    "primaryMuscles": [
+      "Front Delts"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Deltoids": {
+        "heads": [
+          "Anterior Deltoid",
+          "Medial Deltoid",
+          "Posterior Deltoid"
+        ],
+        "targetingDistribution": {
+          "Anterior Deltoid": "85%",
+          "Medial Deltoid": "10%",
+          "Posterior Deltoid": "5%"
+        },
+        "description": "Front raise isolates anterior deltoids. Flexion pattern targets clavicular head of chest and front shoulder."
+      }
+    }
+  },
+  {
+    "name": "Rear Delt Fly",
+    "primaryMuscles": [
+      "Rear Delts"
+    ],
+    "secondaryMuscles": [
+      "Upper Back"
+    ],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Deltoids": {
+        "heads": [
+          "Anterior Deltoid",
+          "Medial Deltoid",
+          "Posterior Deltoid"
+        ],
+        "targetingDistribution": {
+          "Anterior Deltoid": "5%",
+          "Medial Deltoid": "15%",
+          "Posterior Deltoid": "80%"
+        },
+        "description": "Dumbbell rear delt fly isolates posterior deltoids. More ROM than machine version but slightly less stable."
+      }
+    }
+  },
+  {
+    "name": "Upright Row",
+    "primaryMuscles": [
+      "Side Delts",
+      "Traps"
+    ],
+    "secondaryMuscles": [
+      "Front Delts"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Deltoids": {
+        "heads": [
+          "Anterior Deltoid",
+          "Medial Deltoid",
+          "Posterior Deltoid"
+        ],
+        "targetingDistribution": {
+          "Anterior Deltoid": "20%",
+          "Medial Deltoid": "65%",
+          "Posterior Deltoid": "5%",
+          "Trapezius": "10%"
+        },
+        "description": "Upright pulling pattern targets medial delts and upper traps. Elbow position determines emphasis: higher elbows emphasize delts."
+      }
+    }
+  },
+  {
+    "name": "Shrugs",
+    "primaryMuscles": [
+      "Traps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Trapezius": {
+        "heads": [
+          "Upper Trap",
+          "Middle Trap",
+          "Lower Trap"
+        ],
+        "targetingDistribution": {
+          "Upper Trap": "85%",
+          "Middle Trap": "10%",
+          "Lower Trap": "5%"
+        },
+        "description": "Vertical shrug movement isolates upper trapezius. Brief pause at top maximizes trap squeeze. Limited ROM due to scapular mechanics."
+      }
+    }
+  },
+  {
+    "name": "Barbell Shrugs",
+    "primaryMuscles": [
+      "Traps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Barbell"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Trapezius": {
+        "heads": [
+          "Upper Trap",
+          "Middle Trap",
+          "Lower Trap"
+        ],
+        "targetingDistribution": {
+          "Upper Trap": "85%",
+          "Middle Trap": "10%",
+          "Lower Trap": "5%"
+        },
+        "description": "Barbell shrugs allow heavier loading than dumbbells. Identical activation pattern to dumbbell shrugs but greater mechanical advantage."
+      }
+    }
+  },
+  {
+    "name": "Barbell Curl",
+    "primaryMuscles": [
+      "Biceps"
+    ],
+    "secondaryMuscles": [
+      "Forearms"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Biceps": {
+        "heads": [
+          "Long Head",
+          "Short Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "48%",
+          "Short Head": "52%"
+        },
+        "description": "Standard barbell curl provides balanced activation of both bicep heads. Straight bar requires pronated grip limiting long head emphasis."
+      }
+    }
+  },
+  {
+    "name": "Dumbbell Curl",
+    "primaryMuscles": [
+      "Biceps"
+    ],
+    "secondaryMuscles": [
+      "Forearms"
+    ],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Biceps": {
+        "heads": [
+          "Long Head",
+          "Short Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "50%",
+          "Short Head": "50%"
+        },
+        "description": "Dumbbell curls provide balanced activation. Ability to supinate increases long head emphasis. Greater ROM than barbell."
+      }
+    }
+  },
+  {
+    "name": "Hammer Curl",
+    "primaryMuscles": [
+      "Biceps",
+      "Forearms"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Biceps": {
+        "heads": [
+          "Long Head",
+          "Short Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "45%",
+          "Short Head": "40%",
+          "Brachialis": "15%"
+        },
+        "description": "Neutral grip emphasis on brachialis (underlying arm muscle). Lower biceps activation than other curl variations. Maximizes arm thickness development."
+      }
+    }
+  },
+  {
+    "name": "Incline Dumbbell Curl",
+    "primaryMuscles": [
+      "Biceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbells",
+      "Incline Bench"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Biceps": {
+        "heads": [
+          "Long Head",
+          "Short Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "60%",
+          "Short Head": "40%"
+        },
+        "description": "Incline position with arm stretched backward preferentially targets long head. Extended position places long head at stretch."
+      }
+    }
+  },
+  {
+    "name": "Preacher Curl",
+    "primaryMuscles": [
+      "Biceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Barbell",
+      "Preacher Bench"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Biceps": {
+        "heads": [
+          "Long Head",
+          "Short Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "35%",
+          "Short Head": "65%"
+        },
+        "description": "Preacher bench locks upper arm in extended position. Short head emphasized due to mechanical positioning. Long head shortened and less active."
+      }
+    }
+  },
+  {
+    "name": "Barbell Preacher Curl",
+    "primaryMuscles": [
+      "Biceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Barbell",
+      "Preacher Bench"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Biceps": {
+        "heads": [
+          "Long Head",
+          "Short Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "35%",
+          "Short Head": "65%"
+        },
+        "description": "Barbell preacher curl provides short head emphasis with heavier loading capability than dumbbell preacher curls."
+      }
+    }
+  },
+  {
+    "name": "Cable Curl",
+    "primaryMuscles": [
+      "Biceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Biceps": {
+        "heads": [
+          "Long Head",
+          "Short Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "50%",
+          "Short Head": "50%"
+        },
+        "description": "Cable provides constant tension throughout range. Grip width variation allows emphasis: wide grip favors short head, narrow favors long head."
+      }
+    }
+  },
+  {
+    "name": "Concentration Curl",
+    "primaryMuscles": [
+      "Biceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Biceps": {
+        "heads": [
+          "Long Head",
+          "Short Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "40%",
+          "Short Head": "60%"
+        },
+        "description": "Seated position with arm between knees emphasizes short head. Supinated position from neutral increases short head activation."
+      }
+    }
+  },
+  {
+    "name": "Tricep Pushdown",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Triceps": {
+        "heads": [
+          "Long Head",
+          "Medial Head",
+          "Lateral Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "35%",
+          "Medial Head": "45%",
+          "Lateral Head": "20%"
+        },
+        "description": "Pushdown activates medial head predominantly. Rope attachment may slightly increase lateral head involvement vs straight bar."
+      }
+    }
+  },
+  {
+    "name": "Overhead Tricep Extension",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Triceps": {
+        "heads": [
+          "Long Head",
+          "Medial Head",
+          "Lateral Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "55%",
+          "Medial Head": "30%",
+          "Lateral Head": "15%"
+        },
+        "description": "Overhead position with shoulder flexion preferentially activates long head across full range of motion."
+      }
+    }
+  },
+  {
+    "name": "Cable Overhead Tricep Extension",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Triceps": {
+        "heads": [
+          "Long Head",
+          "Medial Head",
+          "Lateral Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "58%",
+          "Medial Head": "28%",
+          "Lateral Head": "14%"
+        },
+        "description": "Cable version provides constant tension throughout overhead extension. Superior long head development with constant resistance."
+      }
+    }
+  },
+  {
+    "name": "Skull Crusher",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "EZ Bar",
+      "Bench"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Triceps": {
+        "heads": [
+          "Long Head",
+          "Medial Head",
+          "Lateral Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "50%",
+          "Medial Head": "32%",
+          "Lateral Head": "18%"
+        },
+        "description": "Lying position with arms overhead targets long head heavily. Extended range of motion provides superior stretch and contraction."
+      }
+    }
+  },
+  {
+    "name": "Close-Grip Bench Press",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [
+      "Chest"
+    ],
+    "equipment": [
+      "Barbell",
+      "Bench"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Triceps": {
+        "heads": [
+          "Long Head",
+          "Medial Head",
+          "Lateral Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "25%",
+          "Medial Head": "60%",
+          "Lateral Head": "15%"
+        },
+        "description": "Narrow grip bench emphasizes medial head. Medial head active in all elbow extension but more so with adduction component."
+      }
+    }
+  },
+  {
+    "name": "Tricep Dips",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [
+      "Chest",
+      "Shoulders"
+    ],
+    "equipment": [
+      "Dip Bar"
+    ],
+    "category": "Calisthenics",
+    "muscleHeadTargeting": {
+      "Triceps": {
+        "heads": [
+          "Long Head",
+          "Medial Head",
+          "Lateral Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "60%",
+          "Medial Head": "25%",
+          "Lateral Head": "15%"
+        },
+        "description": "Bodyweight dips activate long head across full range. Upright torso emphasizes triceps. Leaned forward increases chest involvement."
+      }
+    }
+  },
+  {
+    "name": "Diamond Push-Ups",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [
+      "Chest"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "category": "Calisthenics",
+    "muscleHeadTargeting": {
+      "Triceps": {
+        "heads": [
+          "Long Head",
+          "Medial Head",
+          "Lateral Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "40%",
+          "Medial Head": "45%",
+          "Lateral Head": "15%"
+        },
+        "description": "Diamond hand position with adduction emphasis medial head. Less elbow extension ROM than standard push-ups."
+      }
+    }
+  },
+  {
+    "name": "Plank",
+    "primaryMuscles": [
+      "Core"
+    ],
+    "secondaryMuscles": [
+      "Abdominals",
+      "Shoulders"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Core": {
+        "heads": [
+          "Rectus Abdominis",
+          "Transverse Abdominis",
+          "Obliques"
+        ],
+        "targetingDistribution": {
+          "Rectus Abdominis": "40%",
+          "Transverse Abdominis": "45%",
+          "Obliques": "15%"
+        },
+        "description": "Static hold targets deep core stabilizers. Superior transverse abdominis activation for core strength."
+      }
+    }
+  },
+  {
+    "name": "Crunches",
+    "primaryMuscles": [
+      "Abs"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "category": "Core",
+    "muscleHeadTargeting": {
+      "Abdominals": {
+        "heads": [
+          "Upper Abs",
+          "Middle Abs",
+          "Lower Abs",
+          "Obliques"
+        ],
+        "targetingDistribution": {
+          "Upper Abs": "60%",
+          "Middle Abs": "30%",
+          "Lower Abs": "5%",
+          "Obliques": "5%"
+        },
+        "description": "Spinal flexion movement emphasizes upper rectus abdominis. Limited lower ab involvement due to movement pattern."
+      }
+    }
+  },
+  {
+    "name": "Bicycle Crunches",
+    "primaryMuscles": [
+      "Abs",
+      "Obliques"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "category": "Core",
+    "muscleHeadTargeting": {
+      "Abdominals": {
+        "heads": [
+          "Upper Abs",
+          "Middle Abs",
+          "Lower Abs",
+          "Obliques"
+        ],
+        "targetingDistribution": {
+          "Upper Abs": "40%",
+          "Middle Abs": "30%",
+          "Lower Abs": "10%",
+          "Obliques": "20%"
+        },
+        "description": "Rotation component increases oblique activation. Hip flexion involves lower abs. Compound movement targeting multiple core regions."
+      }
+    }
+  },
+  {
+    "name": "Russian Twist",
+    "primaryMuscles": [
+      "Obliques"
+    ],
+    "secondaryMuscles": [
+      "Abdominals"
+    ],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Obliques": {
+        "heads": [
+          "External Oblique",
+          "Internal Oblique"
+        ],
+        "targetingDistribution": {
+          "External Oblique": "52%",
+          "Internal Oblique": "48%"
+        },
+        "description": "Rotational motion targets both oblique heads. Seated position increases abdominal involvement."
+      }
+    }
+  },
+  {
+    "name": "Hanging Leg Raise",
+    "primaryMuscles": [
+      "Abdominals"
+    ],
+    "secondaryMuscles": [
+      "Hip Flexors"
+    ],
+    "equipment": [
+      "Pull-up Bar"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Abdominals": {
+        "heads": [
+          "Rectus Abdominis (Upper)",
+          "Rectus Abdominis (Middle)",
+          "Rectus Abdominis (Lower)"
+        ],
+        "targetingDistribution": {
+          "Rectus Abdominis (Upper)": "30%",
+          "Rectus Abdominis (Middle)": "35%",
+          "Rectus Abdominis (Lower)": "35%"
+        },
+        "description": "Straight leg raise targets lower abdominals preferentially. Demands greater hip flexor strength and flexibility."
+      }
+    }
+  },
+  {
+    "name": "Ab Wheel Rollout",
+    "primaryMuscles": [
+      "Core",
+      "Abs"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Ab Wheel"
+    ],
+    "category": "Core",
+    "muscleHeadTargeting": {
+      "Abdominals": {
+        "heads": [
+          "Upper Abs",
+          "Middle Abs",
+          "Lower Abs",
+          "Obliques"
+        ],
+        "targetingDistribution": {
+          "Upper Abs": "35%",
+          "Middle Abs": "45%",
+          "Lower Abs": "10%",
+          "Obliques": "10%"
+        },
+        "description": "Anti-extension movement engages entire core. Extended position provides maximum abdominal stretch and contraction."
+      }
+    }
+  },
+  {
+    "name": "Cable Crunch",
+    "primaryMuscles": [
+      "Abdominals"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Abdominals": {
+        "heads": [
+          "Rectus Abdominis (Upper)",
+          "Rectus Abdominis (Middle)",
+          "Rectus Abdominis (Lower)"
+        ],
+        "targetingDistribution": {
+          "Rectus Abdominis (Upper)": "48%",
+          "Rectus Abdominis (Middle)": "37%",
+          "Rectus Abdominis (Lower)": "15%"
+        },
+        "description": "Cable provides constant resistance throughout range. Superior muscle tension for ab development."
+      }
+    }
+  },
+  {
+    "name": "Mountain Climbers",
+    "primaryMuscles": [
+      "Core",
+      "Abs"
+    ],
+    "secondaryMuscles": [
+      "Shoulders"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "category": "Cardio",
+    "muscleHeadTargeting": {
+      "Abdominals": {
+        "heads": [
+          "Upper Abs",
+          "Middle Abs",
+          "Lower Abs",
+          "Obliques"
+        ],
+        "targetingDistribution": {
+          "Upper Abs": "25%",
+          "Middle Abs": "35%",
+          "Lower Abs": "25%",
+          "Obliques": "15%"
+        },
+        "description": "Dynamic movement activates core stabilizers. Hip flexion involves lower abs. Cardio component increases metabolic demand."
+      }
+    }
+  },
+  {
+    "name": "Burpees",
+    "primaryMuscles": [
+      "Full Body"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "category": "Cardio",
+    "muscleHeadTargeting": {
+      "MultipleMuscles": {
+        "heads": [
+          "Full Body Activation"
+        ],
+        "targetingDistribution": {
+          "Quads": "20%",
+          "Chest": "15%",
+          "Triceps": "15%",
+          "Core": "15%",
+          "Back": "15%",
+          "Glutes": "15%",
+          "Other": "5%"
+        },
+        "description": "Compound full-body exercise involving push-up, squat, and jump. Highest caloric expenditure with simultaneous multi-joint activation."
+      }
+    }
+  },
+  {
+    "name": "Lunges",
+    "primaryMuscles": [
+      "Quadriceps",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Hamstrings"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Quadriceps": {
+        "heads": [
+          "Rectus Femoris",
+          "Vastus Lateralis",
+          "Vastus Medialis",
+          "Vastus Intermedius"
+        ],
+        "targetingDistribution": {
+          "Rectus Femoris": "30%",
+          "Vastus Lateralis": "28%",
+          "Vastus Medialis": "28%",
+          "Vastus Intermedius": "14%"
+        },
+        "description": "Lunges activate all quad heads with slight emphasis on rectus femoris due to hip flexion component."
+      }
+    }
+  },
+  {
+    "name": "Walking Lunges",
+    "primaryMuscles": [
+      "Quadriceps",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Hamstrings"
+    ],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Quadriceps": {
+        "heads": [
+          "Rectus Femoris",
+          "Vastus Lateralis",
+          "Vastus Medialis",
+          "Vastus Intermedius"
+        ],
+        "targetingDistribution": {
+          "Rectus Femoris": "32%",
+          "Vastus Lateralis": "27%",
+          "Vastus Medialis": "27%",
+          "Vastus Intermedius": "14%"
+        },
+        "description": "Walking adds cardiovascular component. Similar quad activation to stationary lunges with additional balance demand."
+      }
+    }
+  },
+  {
+    "name": "Hip Thrust",
+    "primaryMuscles": [
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Hamstrings",
+      "Core"
+    ],
+    "equipment": [
+      "Barbell",
+      "Bench"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Glutes": {
+        "heads": [
+          "Gluteus Maximus",
+          "Gluteus Medius",
+          "Gluteus Minimus"
+        ],
+        "targetingDistribution": {
+          "Gluteus Maximus": "88%",
+          "Gluteus Medius": "8%",
+          "Gluteus Minimus": "4%"
+        },
+        "description": "Hip extension from flexed position maximizes gluteus maximus activation. Highest glute activation of any exercise."
+      }
+    }
+  },
+  {
+    "name": "Glute Bridge",
+    "primaryMuscles": [
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Hamstrings",
+      "Core"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Glutes": {
+        "heads": [
+          "Gluteus Maximus",
+          "Gluteus Medius",
+          "Gluteus Minimus"
+        ],
+        "targetingDistribution": {
+          "Gluteus Maximus": "85%",
+          "Gluteus Medius": "10%",
+          "Gluteus Minimus": "5%"
+        },
+        "description": "Floor-based hip extension targets glutes with less intensity than hip thrust. Excellent for activation and warm-up."
+      }
+    }
+  },
+  {
+    "name": "Cable Cross Over",
+    "primaryMuscles": [
+      "Chest"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Chest": {
+        "heads": [
+          "Clavicular (Upper)",
+          "Sternocostal (Middle)",
+          "Costal (Lower)"
+        ],
+        "targetingDistribution": {
+          "Clavicular (Upper)": "Varies with cable height",
+          "Sternocostal (Middle)": "60-70%",
+          "Costal (Lower)": "Varies with cable height"
+        },
+        "description": "Bilateral cable crossover targets middle chest. Cable height adjustment modifies upper/lower emphasis similar to cable flies."
+      }
+    }
+  },
+  {
+    "name": "One Arm Cable Cross Over",
+    "primaryMuscles": [
+      "Chest"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Chest": {
+        "heads": [
+          "Clavicular (Upper)",
+          "Sternocostal (Middle)",
+          "Costal (Lower)"
+        ],
+        "targetingDistribution": {
+          "Clavicular (Upper)": "Varies with cable height",
+          "Sternocostal (Middle)": "55-65%",
+          "Costal (Lower)": "Varies with cable height"
+        },
+        "description": "Unilateral variation increases core rotation demand. Allows independent side development and addresses imbalances."
+      }
+    }
+  },
+  {
+    "name": "Farmer's Walk",
+    "primaryMuscles": [
+      "Forearms",
+      "Traps"
+    ],
+    "secondaryMuscles": [
+      "Core",
+      "Grip"
+    ],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Trapezius": {
+        "heads": [
+          "Upper Trap",
+          "Middle Trap",
+          "Lower Trap"
+        ],
+        "targetingDistribution": {
+          "Upper Trap": "75%",
+          "Middle Trap": "15%",
+          "Lower Trap": "10%"
+        },
+        "description": "Heavy loading activates upper trapezius as primary scapular elevator. Excellent for grip and trap strength development."
+      }
+    }
+  },
+  {
+    "name": "Wrist Curl",
+    "primaryMuscles": [
+      "Forearms"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Forearms": {
+        "heads": [
+          "Flexor Carpi Radialis",
+          "Flexor Carpi Ulnaris",
+          "Palmaris Longus"
+        ],
+        "targetingDistribution": {
+          "Flexor Carpi Radialis": "40%",
+          "Flexor Carpi Ulnaris": "40%",
+          "Palmaris Longus": "20%"
+        },
+        "description": "Wrist flexion targets forearm flexors. Excellent for grip strength and forearm development."
+      }
+    }
+  },
+  {
+    "name": "Reverse Wrist Curl",
+    "primaryMuscles": [
+      "Forearms"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Forearms": {
+        "heads": [
+          "Extensor Carpi Radialis",
+          "Extensor Carpi Ulnaris"
+        ],
+        "targetingDistribution": {
+          "Extensor Carpi Radialis": "60%",
+          "Extensor Carpi Ulnaris": "40%"
+        },
+        "description": "Wrist extension isolates forearm extensor compartment. Often neglected but important for forearm balance and injury prevention."
+      }
+    }
+  },
+  {
+    "name": "Box Jump",
+    "primaryMuscles": [
+      "Quadriceps",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Calves",
+      "Core"
+    ],
+    "equipment": [
+      "Box"
+    ],
+    "category": "Plyometric",
+    "muscleHeadTargeting": {
+      "Quadriceps": {
+        "heads": [
+          "Rectus Femoris",
+          "Vastus Lateralis",
+          "Vastus Medialis",
+          "Vastus Intermedius"
+        ],
+        "targetingDistribution": {
+          "Rectus Femoris": "35%",
+          "Vastus Lateralis": "28%",
+          "Vastus Medialis": "27%",
+          "Vastus Intermedius": "10%"
+        },
+        "description": "Explosive lower body movement develops power. High recruitment of fast-twitch muscle fibers."
+      }
+    }
+  },
+  {
+    "name": "Kettlebell Swing",
+    "primaryMuscles": [
+      "Hamstrings",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Lower Back",
+      "Core",
+      "Shoulders"
+    ],
+    "equipment": [
+      "Kettlebell"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Hamstrings": {
+        "heads": [
+          "Biceps Femoris (Long Head)",
+          "Biceps Femoris (Short Head)",
+          "Semitendinosus",
+          "Semimembranosus"
+        ],
+        "targetingDistribution": {
+          "Biceps Femoris (Long Head)": "42%",
+          "Biceps Femoris (Short Head)": "10%",
+          "Semitendinosus": "33%",
+          "Semimembranosus": "15%"
+        },
+        "description": "Hip hinge explosive movement targets posterior chain. Excellent for strength and conditioning development."
+      }
+    }
+  },
+  {
+    "name": "Turkish Get-Up",
+    "primaryMuscles": [
+      "Shoulders",
+      "Core"
+    ],
+    "secondaryMuscles": [
+      "Glutes",
+      "Hamstrings"
+    ],
+    "equipment": [
+      "Kettlebell"
+    ],
+    "category": "Functional",
+    "muscleHeadTargeting": {
+      "Full Body": {
+        "heads": [
+          "Shoulders",
+          "Core",
+          "Legs"
+        ],
+        "targetingDistribution": {
+          "Shoulders": "35%",
+          "Core": "40%",
+          "Legs": "25%"
+        },
+        "description": "Complex full-body movement improving mobility, strength, and stability. Excellent for shoulder health and functional fitness."
+      }
+    }
+  },
+  {
+    "name": "Battle Ropes",
+    "primaryMuscles": [
+      "Shoulders",
+      "Core"
+    ],
+    "secondaryMuscles": [
+      "Arms"
+    ],
+    "equipment": [
+      "Battle Ropes"
+    ],
+    "category": "Cardio",
+    "muscleHeadTargeting": {
+      "Deltoids": {
+        "heads": [
+          "Anterior Deltoid",
+          "Medial Deltoid",
+          "Posterior Deltoid"
+        ],
+        "targetingDistribution": {
+          "Anterior Deltoid": "45%",
+          "Medial Deltoid": "30%",
+          "Posterior Deltoid": "25%"
+        },
+        "description": "Dynamic oscillating movement activates entire shoulder with anterior deltoid emphasis. High cardiovascular demand combined with shoulder endurance."
+      }
+    }
+  },
+  {
+    "name": "Dragonfly Raise",
+    "primaryMuscles": [
+      "Core",
+      "Lower Abs"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Bench"
+    ],
+    "category": "Core",
+    "muscleHeadTargeting": {
+      "Abdominals": {
+        "heads": [
+          "Upper Abs",
+          "Middle Abs",
+          "Lower Abs",
+          "Obliques"
+        ],
+        "targetingDistribution": {
+          "Upper Abs": "15%",
+          "Middle Abs": "25%",
+          "Lower Abs": "55%",
+          "Obliques": "5%"
+        },
+        "description": "Advanced core movement emphasizing lower abs and hip flexors. Anti-extension with spinal flexion component targets deep core musculature."
+      }
+    }
+  },
+  {
+    "name": "Decline Dumbbell Press",
+    "primaryMuscles": [
+      "Lower Chest"
+    ],
+    "secondaryMuscles": [
+      "Triceps",
+      "Shoulders"
+    ],
+    "equipment": [
+      "Dumbbells",
+      "Decline Bench"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Chest": {
+        "heads": [
+          "Clavicular (Upper)",
+          "Sternocostal (Middle)",
+          "Costal (Lower)"
+        ],
+        "targetingDistribution": {
+          "Clavicular (Upper)": "8%",
+          "Sternocostal (Middle)": "27%",
+          "Costal (Lower)": "65%"
+        },
+        "description": "Decline angle with dumbbells provides maximum range of motion and lower chest emphasis."
+      }
+    }
+  },
+  {
+    "name": "Dumbbell Fly",
+    "primaryMuscles": [
+      "Chest"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbells",
+      "Bench"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Chest": {
+        "heads": [
+          "Clavicular (Upper)",
+          "Sternocostal (Middle)",
+          "Costal (Lower)"
+        ],
+        "targetingDistribution": {
+          "Clavicular (Upper)": "22%",
+          "Sternocostal (Middle)": "68%",
+          "Costal (Lower)": "10%"
+        },
+        "description": "Dumbbell fly provides greater range of motion than machine. Excellent for stretch and contraction of pectorals."
+      }
+    }
+  },
+  {
+    "name": "Incline Dumbbell Fly",
+    "primaryMuscles": [
+      "Upper Chest"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbells",
+      "Incline Bench"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Chest": {
+        "heads": [
+          "Clavicular (Upper)",
+          "Sternocostal (Middle)",
+          "Costal (Lower)"
+        ],
+        "targetingDistribution": {
+          "Clavicular (Upper)": "58%",
+          "Sternocostal (Middle)": "37%",
+          "Costal (Lower)": "5%"
+        },
+        "description": "Incline angle targets upper chest preferentially. Excellent for clavicular head development with greater ROM."
+      }
+    }
+  },
+  {
+    "name": "Decline Dumbbell Fly",
+    "primaryMuscles": [
+      "Lower Chest"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbells",
+      "Decline Bench"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Chest": {
+        "heads": [
+          "Clavicular (Upper)",
+          "Sternocostal (Middle)",
+          "Costal (Lower)"
+        ],
+        "targetingDistribution": {
+          "Clavicular (Upper)": "5%",
+          "Sternocostal (Middle)": "30%",
+          "Costal (Lower)": "65%"
+        },
+        "description": "Decline angle with fly motion targets lower chest costal head maximally."
+      }
+    }
+  },
+  {
+    "name": "Incline Push-Ups",
+    "primaryMuscles": [
+      "Chest"
+    ],
+    "secondaryMuscles": [
+      "Triceps",
+      "Shoulders"
+    ],
+    "equipment": [
+      "Bench"
+    ],
+    "category": "Calisthenics",
+    "muscleHeadTargeting": {
+      "Chest": {
+        "heads": [
+          "Clavicular (Upper)",
+          "Sternocostal (Middle)",
+          "Costal (Lower)"
+        ],
+        "targetingDistribution": {
+          "Clavicular (Upper)": "45%",
+          "Sternocostal (Middle)": "50%",
+          "Costal (Lower)": "5%"
+        },
+        "description": "Incline position targets upper chest more than standard push-ups."
+      }
+    }
+  },
+  {
+    "name": "Decline Push-Ups",
+    "primaryMuscles": [
+      "Chest"
+    ],
+    "secondaryMuscles": [
+      "Triceps",
+      "Shoulders"
+    ],
+    "equipment": [
+      "Bench"
+    ],
+    "category": "Calisthenics",
+    "muscleHeadTargeting": {
+      "Chest": {
+        "heads": [
+          "Clavicular (Upper)",
+          "Sternocostal (Middle)",
+          "Costal (Lower)"
+        ],
+        "targetingDistribution": {
+          "Clavicular (Upper)": "5%",
+          "Sternocostal (Middle)": "35%",
+          "Costal (Lower)": "60%"
+        },
+        "description": "Decline position targets lower chest with increased difficulty and range of motion."
+      }
+    }
+  },
+  {
+    "name": "Resistance Band Chest Fly",
+    "primaryMuscles": [
+      "Chest"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Resistance Band"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Chest": {
+        "heads": [
+          "Clavicular (Upper)",
+          "Sternocostal (Middle)",
+          "Costal (Lower)"
+        ],
+        "targetingDistribution": {
+          "Clavicular (Upper)": "25%",
+          "Sternocostal (Middle)": "65%",
+          "Costal (Lower)": "10%"
+        },
+        "description": "Band provides variable resistance with constant tension on chest muscles throughout range."
+      }
+    }
+  },
+  {
+    "name": "Standing Leg Curl",
+    "primaryMuscles": [
+      "Hamstrings"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Hamstrings": {
+        "heads": [
+          "Biceps Femoris (Long Head)",
+          "Biceps Femoris (Short Head)",
+          "Semitendinosus",
+          "Semimembranosus"
+        ],
+        "targetingDistribution": {
+          "Biceps Femoris (Long Head)": "32%",
+          "Biceps Femoris (Short Head)": "16%",
+          "Semitendinosus": "33%",
+          "Semimembranosus": "19%"
+        },
+        "description": "Standing position requires greater balance and stabilizer activation. Slightly increased emphasis on long head."
+      }
+    }
+  },
+  {
+    "name": "Trap Bar Deadlift",
+    "primaryMuscles": [
+      "Back",
+      "Hamstrings",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Core",
+      "Quadriceps"
+    ],
+    "equipment": [
+      "Trap Bar"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Hamstrings": {
+        "heads": [
+          "Biceps Femoris (Long Head)",
+          "Biceps Femoris (Short Head)",
+          "Semitendinosus",
+          "Semimembranosus"
+        ],
+        "targetingDistribution": {
+          "Biceps Femoris (Long Head)": "38%",
+          "Biceps Femoris (Short Head)": "12%",
+          "Semitendinosus": "35%",
+          "Semimembranosus": "15%"
+        },
+        "description": "Trap bar neutral grip reduces lower back strain. Greater quad involvement compared to conventional deadlift."
+      }
+    }
+  },
+  {
+    "name": "Dumbbell Deadlift",
+    "primaryMuscles": [
+      "Hamstrings",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Back",
+      "Core"
+    ],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Hamstrings": {
+        "heads": [
+          "Biceps Femoris (Long Head)",
+          "Biceps Femoris (Short Head)",
+          "Semitendinosus",
+          "Semimembranosus"
+        ],
+        "targetingDistribution": {
+          "Biceps Femoris (Long Head)": "42%",
+          "Biceps Femoris (Short Head)": "10%",
+          "Semitendinosus": "34%",
+          "Semimembranosus": "14%"
+        },
+        "description": "Dumbbell variation increases range of motion and challenges stabilizers. Greater emphasis on posterior chain."
+      }
+    }
+  },
+  {
+    "name": "Single Leg Deadlift",
+    "primaryMuscles": [
+      "Hamstrings",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Balance",
+      "Core"
+    ],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Hamstrings": {
+        "heads": [
+          "Biceps Femoris (Long Head)",
+          "Biceps Femoris (Short Head)",
+          "Semitendinosus",
+          "Semimembranosus"
+        ],
+        "targetingDistribution": {
+          "Biceps Femoris (Long Head)": "48%",
+          "Biceps Femoris (Short Head)": "8%",
+          "Semitendinosus": "32%",
+          "Semimembranosus": "12%"
+        },
+        "description": "Single-leg stance dramatically increases stabilizer activation and balance requirements. Maximum hamstring stretch on standing leg."
+      }
+    }
+  },
+  {
+    "name": "Single Leg Calf Raise",
+    "primaryMuscles": [
+      "Calves"
+    ],
+    "secondaryMuscles": [
+      "Balance"
+    ],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Calves": {
+        "heads": [
+          "Gastrocnemius",
+          "Soleus"
+        ],
+        "targetingDistribution": {
+          "Gastrocnemius": "70%",
+          "Soleus": "30%"
+        },
+        "description": "Single-leg variation increases intensity and balance demand while maintaining gastrocnemius emphasis."
+      }
+    }
+  },
+  {
+    "name": "Dumbbell Calf Raise",
+    "primaryMuscles": [
+      "Calves"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Calves": {
+        "heads": [
+          "Gastrocnemius",
+          "Soleus"
+        ],
+        "targetingDistribution": {
+          "Gastrocnemius": "70%",
+          "Soleus": "30%"
+        },
+        "description": "Dumbbell variation allows for greater range of motion and individual arm control."
+      }
+    }
+  },
+  {
+    "name": "Wide Grip Pull-Up",
+    "primaryMuscles": [
+      "Lats"
+    ],
+    "secondaryMuscles": [
+      "Back",
+      "Biceps"
+    ],
+    "equipment": [
+      "Pull-up Bar"
+    ],
+    "category": "Calisthenics",
+    "muscleHeadTargeting": {
+      "Lats": {
+        "heads": [
+          "Upper Lat",
+          "Middle Lat",
+          "Lower Lat"
+        ],
+        "targetingDistribution": {
+          "Upper Lat": "25%",
+          "Middle Lat": "55%",
+          "Lower Lat": "20%"
+        },
+        "description": "Wide grip emphasizes upper and middle lat fibers. Maximum width for lat development with reduced bicep involvement."
+      }
+    }
+  },
+  {
+    "name": "Narrow Grip Pull-Up",
+    "primaryMuscles": [
+      "Lats",
+      "Biceps"
+    ],
+    "secondaryMuscles": [
+      "Back"
+    ],
+    "equipment": [
+      "Pull-up Bar"
+    ],
+    "category": "Calisthenics",
+    "muscleHeadTargeting": {
+      "Lats": {
+        "heads": [
+          "Upper Lat",
+          "Middle Lat",
+          "Lower Lat"
+        ],
+        "targetingDistribution": {
+          "Upper Lat": "15%",
+          "Middle Lat": "45%",
+          "Lower Lat": "40%"
+        },
+        "description": "Narrow grip increases lower lat engagement and significant bicep involvement."
+      }
+    }
+  },
+  {
+    "name": "Close Grip Lat Pulldown",
+    "primaryMuscles": [
+      "Lats"
+    ],
+    "secondaryMuscles": [
+      "Biceps"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Lats": {
+        "heads": [
+          "Upper Lat",
+          "Middle Lat",
+          "Lower Lat"
+        ],
+        "targetingDistribution": {
+          "Upper Lat": "18%",
+          "Middle Lat": "42%",
+          "Lower Lat": "40%"
+        },
+        "description": "Close grip increases lower lat and bicep recruitment. Greater bicep involvement than wide grip variations."
+      }
+    }
+  },
+  {
+    "name": "Reverse Grip Lat Pulldown",
+    "primaryMuscles": [
+      "Lats"
+    ],
+    "secondaryMuscles": [
+      "Biceps"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Lats": {
+        "heads": [
+          "Upper Lat",
+          "Middle Lat",
+          "Lower Lat"
+        ],
+        "targetingDistribution": {
+          "Upper Lat": "20%",
+          "Middle Lat": "48%",
+          "Lower Lat": "32%"
+        },
+        "description": "Underhand grip increases bicep emphasis while reducing lat activation compared to pronated grip."
+      }
+    }
+  },
+  {
+    "name": "Straight Arm Pulldown",
+    "primaryMuscles": [
+      "Lats"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Lats": {
+        "heads": [
+          "Upper Lat",
+          "Middle Lat",
+          "Lower Lat"
+        ],
+        "targetingDistribution": {
+          "Upper Lat": "22%",
+          "Middle Lat": "60%",
+          "Lower Lat": "18%"
+        },
+        "description": "Arms remain straight throughout movement, isolating lats without bicep involvement. Emphasizes middle lat fibers."
+      }
+    }
+  },
+  {
+    "name": "Pendlay Row",
+    "primaryMuscles": [
+      "Back",
+      "Lats"
+    ],
+    "secondaryMuscles": [
+      "Biceps"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Lats": {
+        "heads": [
+          "Upper Lat",
+          "Middle Lat",
+          "Lower Lat"
+        ],
+        "targetingDistribution": {
+          "Upper Lat": "16%",
+          "Middle Lat": "62%",
+          "Lower Lat": "22%"
+        },
+        "description": "Chest supported row removes lower back strain. Rigid body position emphasizes back muscle contraction."
+      }
+    }
+  },
+  {
+    "name": "Machine Row",
+    "primaryMuscles": [
+      "Back",
+      "Lats"
+    ],
+    "secondaryMuscles": [
+      "Biceps"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Lats": {
+        "heads": [
+          "Upper Lat",
+          "Middle Lat",
+          "Lower Lat"
+        ],
+        "targetingDistribution": {
+          "Upper Lat": "16%",
+          "Middle Lat": "64%",
+          "Lower Lat": "20%"
+        },
+        "description": "Machine-guided path reduces stabilization demands. Allows higher training loads with better form isolation."
+      }
+    }
+  },
+  {
+    "name": "Military Press",
+    "primaryMuscles": [
+      "Shoulders"
+    ],
+    "secondaryMuscles": [
+      "Triceps",
+      "Core"
+    ],
+    "equipment": [
+      "Barbell"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Deltoids": {
+        "heads": [
+          "Anterior Deltoid",
+          "Medial Deltoid",
+          "Posterior Deltoid"
+        ],
+        "targetingDistribution": {
+          "Anterior Deltoid": "62%",
+          "Medial Deltoid": "33%",
+          "Posterior Deltoid": "5%"
+        },
+        "description": "Standing position with feet together demands greater core stability. Similar anterior delt emphasis to overhead press."
+      }
+    }
+  },
+  {
+    "name": "Cable Lateral Raise",
+    "primaryMuscles": [
+      "Side Delts"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Deltoids": {
+        "heads": [
+          "Anterior Deltoid",
+          "Medial Deltoid",
+          "Posterior Deltoid"
+        ],
+        "targetingDistribution": {
+          "Anterior Deltoid": "22%",
+          "Medial Deltoid": "73%",
+          "Posterior Deltoid": "5%"
+        },
+        "description": "Cable provides constant tension throughout range of motion. Excellent for medial delt isolation with progressive resistance."
+      }
+    }
+  },
+  {
+    "name": "Cable Front Raise",
+    "primaryMuscles": [
+      "Front Delts"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Deltoids": {
+        "heads": [
+          "Anterior Deltoid",
+          "Medial Deltoid",
+          "Posterior Deltoid"
+        ],
+        "targetingDistribution": {
+          "Anterior Deltoid": "87%",
+          "Medial Deltoid": "8%",
+          "Posterior Deltoid": "5%"
+        },
+        "description": "Cable variation provides constant tension with constant resistance curve. Superior anterior delt isolation."
+      }
+    }
+  },
+  {
+    "name": "Cable Rear Delt Fly",
+    "primaryMuscles": [
+      "Rear Delts"
+    ],
+    "secondaryMuscles": [
+      "Upper Back"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Deltoids": {
+        "heads": [
+          "Anterior Deltoid",
+          "Medial Deltoid",
+          "Posterior Deltoid"
+        ],
+        "targetingDistribution": {
+          "Anterior Deltoid": "4%",
+          "Medial Deltoid": "14%",
+          "Posterior Deltoid": "82%"
+        },
+        "description": "Cable version provides constant tension throughout range. Superior rear delt isolation compared to free weights."
+      }
+    }
+  },
+  {
+    "name": "Cable Upright Row",
+    "primaryMuscles": [
+      "Side Delts",
+      "Traps"
+    ],
+    "secondaryMuscles": [
+      "Front Delts"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Deltoids": {
+        "heads": [
+          "Anterior Deltoid",
+          "Medial Deltoid",
+          "Posterior Deltoid"
+        ],
+        "targetingDistribution": {
+          "Anterior Deltoid": "22%",
+          "Medial Deltoid": "63%",
+          "Posterior Deltoid": "5%"
+        },
+        "description": "Cable variation provides safer joint mechanics with constant resistance throughout range."
+      }
+    }
+  },
+  {
+    "name": "Cable Shrugs",
+    "primaryMuscles": [
+      "Traps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Trapezius": {
+        "heads": [
+          "Upper Trap",
+          "Middle Trap",
+          "Lower Trap"
+        ],
+        "targetingDistribution": {
+          "Upper Trap": "85%",
+          "Middle Trap": "10%",
+          "Lower Trap": "5%"
+        },
+        "description": "Cable provides constant tension throughout movement. Consistent resistance curve maintains upper trap activation."
+      }
+    }
+  },
+  {
+    "name": "EZ Bar Curl",
+    "primaryMuscles": [
+      "Biceps"
+    ],
+    "secondaryMuscles": [
+      "Forearms"
+    ],
+    "equipment": [
+      "EZ Bar"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Biceps": {
+        "heads": [
+          "Long Head",
+          "Short Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "45%",
+          "Short Head": "55%"
+        },
+        "description": "EZ bar angled grip reduces wrist strain. Slight emphasis on short head compared to straight bar."
+      }
+    }
+  },
+  {
+    "name": "Spider Curl",
+    "primaryMuscles": [
+      "Biceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Barbell",
+      "Preacher Bench"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Biceps": {
+        "heads": [
+          "Long Head",
+          "Short Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "55%",
+          "Short Head": "45%"
+        },
+        "description": "Arm position and bench angle provide long head emphasis. Strict form variation with excellent mind-muscle connection."
+      }
+    }
+  },
+  {
+    "name": "Rope Tricep Pushdown",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Triceps": {
+        "heads": [
+          "Long Head",
+          "Medial Head",
+          "Lateral Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "32%",
+          "Medial Head": "40%",
+          "Lateral Head": "28%"
+        },
+        "description": "Rope attachment allows greater lateral head engagement with hand separation at bottom. Superior tricep definition."
+      }
+    }
+  },
+  {
+    "name": "V-Bar Tricep Pushdown",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Triceps": {
+        "heads": [
+          "Long Head",
+          "Medial Head",
+          "Lateral Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "38%",
+          "Medial Head": "47%",
+          "Lateral Head": "15%"
+        },
+        "description": "V-bar grip keeps hands close together. Greater medial head emphasis with higher loading capability."
+      }
+    }
+  },
+  {
+    "name": "Tricep Kickback",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Triceps": {
+        "heads": [
+          "Long Head",
+          "Medial Head",
+          "Lateral Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "28%",
+          "Medial Head": "35%",
+          "Lateral Head": "37%"
+        },
+        "description": "Elbow-locked position emphasizes lateral head. Light weight with high reps excellent for pump and definition."
+      }
+    }
+  },
+  {
+    "name": "Incline Skull Crusher",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "EZ Bar",
+      "Incline Bench"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Triceps": {
+        "heads": [
+          "Long Head",
+          "Medial Head",
+          "Lateral Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "48%",
+          "Medial Head": "34%",
+          "Lateral Head": "18%"
+        },
+        "description": "Incline angle reduces long head emphasis slightly compared to flat bench skull crusher."
+      }
+    }
+  },
+  {
+    "name": "Decline Skull Crusher",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "EZ Bar",
+      "Decline Bench"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Triceps": {
+        "heads": [
+          "Long Head",
+          "Medial Head",
+          "Lateral Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "52%",
+          "Medial Head": "30%",
+          "Lateral Head": "18%"
+        },
+        "description": "Decline angle increases long head stretch and tension. Maximum range of motion for long head activation."
+      }
+    }
+  },
+  {
+    "name": "Close Grip Bench Press",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [
+      "Chest",
+      "Shoulders"
+    ],
+    "equipment": [
+      "Barbell",
+      "Bench"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Triceps": {
+        "heads": [
+          "Long Head",
+          "Medial Head",
+          "Lateral Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "32%",
+          "Medial Head": "42%",
+          "Lateral Head": "26%"
+        },
+        "description": "Close grip shifts emphasis to triceps while allowing heavy loading. Medial head emphasis with compound movement benefits."
+      }
+    }
+  },
+  {
+    "name": "Dips (Tricep Emphasis)",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [
+      "Chest",
+      "Shoulders"
+    ],
+    "equipment": [
+      "Dip Bar"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Triceps": {
+        "heads": [
+          "Long Head",
+          "Medial Head",
+          "Lateral Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "45%",
+          "Medial Head": "35%",
+          "Lateral Head": "20%"
+        },
+        "description": "Upright posture targets triceps over chest. Compound movement allowing heavy loading for tricep strength development."
+      }
+    }
+  },
+  {
+    "name": "Bench Dips",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [
+      "Chest",
+      "Shoulders"
+    ],
+    "equipment": [
+      "Bench"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Triceps": {
+        "heads": [
+          "Long Head",
+          "Medial Head",
+          "Lateral Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "42%",
+          "Medial Head": "38%",
+          "Lateral Head": "20%"
+        },
+        "description": "Bodyweight or weighted bench dips provide tricep overload with less shoulder strain than dip bar."
+      }
+    }
+  },
+  {
+    "name": "JM Press",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [
+      "Chest",
+      "Shoulders"
+    ],
+    "equipment": [
+      "Barbell",
+      "Bench"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Triceps": {
+        "heads": [
+          "Long Head",
+          "Medial Head",
+          "Lateral Head"
+        ],
+        "targetingDistribution": {
+          "Long Head": "52%",
+          "Medial Head": "34%",
+          "Lateral Head": "14%"
+        },
+        "description": "Hybrid movement between bench press and close grip press. Unique angle targets long head preferentially."
+      }
+    }
+  },
+  {
+    "name": "Wrist Extension",
+    "primaryMuscles": [
+      "Forearms"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Dumbbell"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Forearms": {
+        "heads": [
+          "Extensor Carpi Radialis",
+          "Extensor Carpi Ulnaris",
+          "Extensor Digitorum"
+        ],
+        "targetingDistribution": {
+          "Extensor Carpi Radialis": "40%",
+          "Extensor Carpi Ulnaris": "35%",
+          "Extensor Digitorum": "25%"
+        },
+        "description": "Wrist extension targets forearm extensors. Important for balanced forearm development and injury prevention."
+      }
+    }
+  },
+  {
+    "name": "Barbell Wrist Curl",
+    "primaryMuscles": [
+      "Forearms"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Barbell"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Forearms": {
+        "heads": [
+          "Flexor Carpi Radialis",
+          "Flexor Carpi Ulnaris",
+          "Palmaris Longus"
+        ],
+        "targetingDistribution": {
+          "Flexor Carpi Radialis": "40%",
+          "Flexor Carpi Ulnaris": "40%",
+          "Palmaris Longus": "20%"
+        },
+        "description": "Barbell version allows for heavier loading than dumbbells. Both hands work together for balanced development."
+      }
+    }
+  },
+  {
+    "name": "Crunch",
+    "primaryMuscles": [
+      "Abdominals"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Abdominals": {
+        "heads": [
+          "Rectus Abdominis (Upper)",
+          "Rectus Abdominis (Middle)",
+          "Rectus Abdominis (Lower)"
+        ],
+        "targetingDistribution": {
+          "Rectus Abdominis (Upper)": "50%",
+          "Rectus Abdominis (Middle)": "35%",
+          "Rectus Abdominis (Lower)": "15%"
+        },
+        "description": "Spinal flexion targets upper abdominals preferentially. Limited range of motion compared to sit-ups."
+      }
+    }
+  },
+  {
+    "name": "Machine Crunch",
+    "primaryMuscles": [
+      "Abdominals"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Abdominals": {
+        "heads": [
+          "Rectus Abdominis (Upper)",
+          "Rectus Abdominis (Middle)",
+          "Rectus Abdominis (Lower)"
+        ],
+        "targetingDistribution": {
+          "Rectus Abdominis (Upper)": "50%",
+          "Rectus Abdominis (Middle)": "35%",
+          "Rectus Abdominis (Lower)": "15%"
+        },
+        "description": "Machine-guided motion reduces stabilization demands. Allows for heavier loading with strict form."
+      }
+    }
+  },
+  {
+    "name": "Sit-Up",
+    "primaryMuscles": [
+      "Abdominals"
+    ],
+    "secondaryMuscles": [
+      "Hip Flexors"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Abdominals": {
+        "heads": [
+          "Rectus Abdominis (Upper)",
+          "Rectus Abdominis (Middle)",
+          "Rectus Abdominis (Lower)"
+        ],
+        "targetingDistribution": {
+          "Rectus Abdominis (Upper)": "40%",
+          "Rectus Abdominis (Middle)": "35%",
+          "Rectus Abdominis (Lower)": "25%"
+        },
+        "description": "Full spinal flexion with hip flexion involves rectus abdominis throughout range. Greater hip flexor involvement."
+      }
+    }
+  },
+  {
+    "name": "Hanging Knee Raise",
+    "primaryMuscles": [
+      "Abdominals"
+    ],
+    "secondaryMuscles": [
+      "Hip Flexors"
+    ],
+    "equipment": [
+      "Pull-up Bar"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Abdominals": {
+        "heads": [
+          "Rectus Abdominis (Upper)",
+          "Rectus Abdominis (Middle)",
+          "Rectus Abdominis (Lower)"
+        ],
+        "targetingDistribution": {
+          "Rectus Abdominis (Upper)": "35%",
+          "Rectus Abdominis (Middle)": "35%",
+          "Rectus Abdominis (Lower)": "30%"
+        },
+        "description": "Knee lift with hip flexion targets lower abdominals more than upper. Significant hip flexor involvement."
+      }
+    }
+  },
+  {
+    "name": "Leg Raise",
+    "primaryMuscles": [
+      "Abdominals"
+    ],
+    "secondaryMuscles": [
+      "Hip Flexors"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Abdominals": {
+        "heads": [
+          "Rectus Abdominis (Upper)",
+          "Rectus Abdominis (Middle)",
+          "Rectus Abdominis (Lower)"
+        ],
+        "targetingDistribution": {
+          "Rectus Abdominis (Upper)": "32%",
+          "Rectus Abdominis (Middle)": "34%",
+          "Rectus Abdominis (Lower)": "34%"
+        },
+        "description": "Lying leg raise emphasizes lower rectus abdominis and hip flexors. Excellent for core strength development."
+      }
+    }
+  },
+  {
+    "name": "Side Plank",
+    "primaryMuscles": [
+      "Obliques"
+    ],
+    "secondaryMuscles": [
+      "Core",
+      "Abdominals"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Obliques": {
+        "heads": [
+          "External Oblique",
+          "Internal Oblique"
+        ],
+        "targetingDistribution": {
+          "External Oblique": "55%",
+          "Internal Oblique": "45%"
+        },
+        "description": "Lateral stability demands heavy oblique engagement. Superior oblique development compared to anti-rotation exercises."
+      }
+    }
+  },
+  {
+    "name": "Pallof Press",
+    "primaryMuscles": [
+      "Core"
+    ],
+    "secondaryMuscles": [
+      "Obliques",
+      "Abdominals"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Core": {
+        "heads": [
+          "Rectus Abdominis",
+          "Transverse Abdominis",
+          "Obliques"
+        ],
+        "targetingDistribution": {
+          "Rectus Abdominis": "30%",
+          "Transverse Abdominis": "50%",
+          "Obliques": "20%"
+        },
+        "description": "Anti-rotation movement targets deep core stabilizers. Superior functional core strength development."
+      }
+    }
+  },
+  {
+    "name": "Dumbbell Hip Thrust",
+    "primaryMuscles": [
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Hamstrings",
+      "Core"
+    ],
+    "equipment": [
+      "Dumbbells",
+      "Bench"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Glutes": {
+        "heads": [
+          "Gluteus Maximus",
+          "Gluteus Medius",
+          "Gluteus Minimus"
+        ],
+        "targetingDistribution": {
+          "Gluteus Maximus": "87%",
+          "Gluteus Medius": "8%",
+          "Gluteus Minimus": "5%"
+        },
+        "description": "Dumbbell variation provides greater range of motion and individual leg control. Slightly reduced loading compared to barbell."
+      }
+    }
+  },
+  {
+    "name": "Cable Pull Through",
+    "primaryMuscles": [
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Hamstrings",
+      "Lower Back"
+    ],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Glutes": {
+        "heads": [
+          "Gluteus Maximus",
+          "Gluteus Medius",
+          "Gluteus Minimus"
+        ],
+        "targetingDistribution": {
+          "Gluteus Maximus": "86%",
+          "Gluteus Medius": "9%",
+          "Gluteus Minimus": "5%"
+        },
+        "description": "Hip hinge pattern with constant tension targets glutes throughout range. Excellent glute isolation exercise."
+      }
+    }
+  },
+  {
+    "name": "Glute Kickback",
+    "primaryMuscles": [
+      "Glutes"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Cable"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Glutes": {
+        "heads": [
+          "Gluteus Maximus",
+          "Gluteus Medius",
+          "Gluteus Minimus"
+        ],
+        "targetingDistribution": {
+          "Gluteus Maximus": "82%",
+          "Gluteus Medius": "12%",
+          "Gluteus Minimus": "6%"
+        },
+        "description": "Hip extension with knee flexion isolates gluteus maximus. High rep ranges optimal for pump and endurance."
+      }
+    }
+  },
+  {
+    "name": "Machine Hip Abduction",
+    "primaryMuscles": [
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Hip Abductors"
+    ],
+    "equipment": [
+      "Machine"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Glutes": {
+        "heads": [
+          "Gluteus Maximus",
+          "Gluteus Medius",
+          "Gluteus Minimus"
+        ],
+        "targetingDistribution": {
+          "Gluteus Maximus": "28%",
+          "Gluteus Medius": "62%",
+          "Gluteus Minimus": "10%"
+        },
+        "description": "Hip abduction emphasizes gluteus medius and minimus. Important for hip stability and glute development."
+      }
+    }
+  },
+  {
+    "name": "Machine Hip Adduction",
+    "primaryMuscles": [
+      "Hip Adductors"
+    ],
+    "secondaryMuscles": [],
+    "equipment": [
+      "Machine"
+    ],
+    "category": "Isolation",
+    "muscleHeadTargeting": {
+      "Adductors": {
+        "heads": [
+          "Adductor Longus",
+          "Adductor Brevis",
+          "Adductor Magnus"
+        ],
+        "targetingDistribution": {
+          "Adductor Longus": "35%",
+          "Adductor Brevis": "30%",
+          "Adductor Magnus": "35%"
+        },
+        "description": "Hip adduction targets inner thigh musculature. Important for balanced leg development and hip stability."
+      }
+    }
+  },
+  {
+    "name": "Dragon Flag",
+    "primaryMuscles": [
+      "Abdominals",
+      "Core"
+    ],
+    "secondaryMuscles": [
+      "Chest",
+      "Shoulders"
+    ],
+    "equipment": [
+      "Bench"
+    ],
+    "category": "Calisthenics",
+    "muscleHeadTargeting": {
+      "Abdominals": {
+        "heads": [
+          "Rectus Abdominis (Upper)",
+          "Rectus Abdominis (Middle)",
+          "Rectus Abdominis (Lower)"
+        ],
+        "targetingDistribution": {
+          "Rectus Abdominis (Upper)": "30%",
+          "Rectus Abdominis (Middle)": "35%",
+          "Rectus Abdominis (Lower)": "35%"
+        },
+        "description": "Advanced bodyweight exercise targeting entire rectus abdominis. Requires significant core strength and body control."
+      }
+    }
+  },
+  {
+    "name": "Hollow Body Hold",
+    "primaryMuscles": [
+      "Core",
+      "Abdominals"
+    ],
+    "secondaryMuscles": [
+      "Shoulders"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "category": "Calisthenics",
+    "muscleHeadTargeting": {
+      "Core": {
+        "heads": [
+          "Rectus Abdominis",
+          "Transverse Abdominis",
+          "Obliques"
+        ],
+        "targetingDistribution": {
+          "Rectus Abdominis": "45%",
+          "Transverse Abdominis": "40%",
+          "Obliques": "15%"
+        },
+        "description": "Static bodyweight hold emphasizes deep core stability. Foundation for advanced gymnastics movements."
+      }
+    }
+  },
+  {
+    "name": "L-Sit",
+    "primaryMuscles": [
+      "Core",
+      "Abdominals"
+    ],
+    "secondaryMuscles": [
+      "Hip Flexors",
+      "Shoulders"
+    ],
+    "equipment": [
+      "Parallettes"
+    ],
+    "category": "Calisthenics",
+    "muscleHeadTargeting": {
+      "Core": {
+        "heads": [
+          "Rectus Abdominis",
+          "Transverse Abdominis",
+          "Hip Flexors"
+        ],
+        "targetingDistribution": {
+          "Rectus Abdominis": "40%",
+          "Transverse Abdominis": "35%",
+          "Hip Flexors": "25%"
+        },
+        "description": "Advanced hold requiring hip flexor and core strength. Excellent for straight arm pressing strength development."
+      }
+    }
+  },
+  {
+    "name": "Lunge",
+    "primaryMuscles": [
+      "Quadriceps",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Hamstrings",
+      "Core"
+    ],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Quadriceps": {
+        "heads": [
+          "Rectus Femoris",
+          "Vastus Lateralis",
+          "Vastus Medialis",
+          "Vastus Intermedius"
+        ],
+        "targetingDistribution": {
+          "Rectus Femoris": "28%",
+          "Vastus Lateralis": "28%",
+          "Vastus Medialis": "28%",
+          "Vastus Intermedius": "16%"
+        },
+        "description": "Single-leg stance emphasizes quadriceps and glutes unilaterally. Excellent for addressing muscle imbalances."
+      }
+    }
+  },
+  {
+    "name": "Walking Lunge",
+    "primaryMuscles": [
+      "Quadriceps",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Hamstrings",
+      "Core"
+    ],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Quadriceps": {
+        "heads": [
+          "Rectus Femoris",
+          "Vastus Lateralis",
+          "Vastus Medialis",
+          "Vastus Intermedius"
+        ],
+        "targetingDistribution": {
+          "Rectus Femoris": "29%",
+          "Vastus Lateralis": "27%",
+          "Vastus Medialis": "27%",
+          "Vastus Intermedius": "17%"
+        },
+        "description": "Locomotive pattern increases metabolic demand and functional strength development."
+      }
+    }
+  },
+  {
+    "name": "Dumbbell Thruster",
+    "primaryMuscles": [
+      "Quadriceps",
+      "Shoulders"
+    ],
+    "secondaryMuscles": [
+      "Glutes",
+      "Triceps",
+      "Core"
+    ],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Quadriceps": {
+        "heads": [
+          "Rectus Femoris",
+          "Vastus Lateralis",
+          "Vastus Medialis",
+          "Vastus Intermedius"
+        ],
+        "targetingDistribution": {
+          "Rectus Femoris": "32%",
+          "Vastus Lateralis": "28%",
+          "Vastus Medialis": "28%",
+          "Vastus Intermedius": "12%"
+        },
+        "description": "Squat to shoulder press combination engages entire lower and upper body. High metabolic demand and functional movement."
+      }
+    }
+  },
+  {
+    "name": "Step-Up",
+    "primaryMuscles": [
+      "Quadriceps",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Hamstrings",
+      "Core"
+    ],
+    "equipment": [
+      "Dumbbells",
+      "Box"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Quadriceps": {
+        "heads": [
+          "Rectus Femoris",
+          "Vastus Lateralis",
+          "Vastus Medialis",
+          "Vastus Intermedius"
+        ],
+        "targetingDistribution": {
+          "Rectus Femoris": "30%",
+          "Vastus Lateralis": "27%",
+          "Vastus Medialis": "27%",
+          "Vastus Intermedius": "16%"
+        },
+        "description": "Unilateral stepping movement targets quadriceps and glutes of leading leg. Excellent functional exercise."
+      }
+    }
+  },
+  {
+    "name": "Burpee",
+    "primaryMuscles": [
+      "Chest",
+      "Quadriceps"
+    ],
+    "secondaryMuscles": [
+      "Core",
+      "Shoulders",
+      "Triceps"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "category": "Plyometric",
+    "muscleHeadTargeting": {
+      "Full Body": {
+        "heads": [
+          "Upper Body",
+          "Lower Body",
+          "Core"
+        ],
+        "targetingDistribution": {
+          "Upper Body": "40%",
+          "Lower Body": "40%",
+          "Core": "20%"
+        },
+        "description": "Full-body compound movement combining push-up, squat, and jump. High metabolic demand and cardiovascular benefit."
+      }
+    }
+  },
+  {
+    "name": "Jump Squat",
+    "primaryMuscles": [
+      "Quadriceps",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Calves",
+      "Core"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "category": "Plyometric",
+    "muscleHeadTargeting": {
+      "Quadriceps": {
+        "heads": [
+          "Rectus Femoris",
+          "Vastus Lateralis",
+          "Vastus Medialis",
+          "Vastus Intermedius"
+        ],
+        "targetingDistribution": {
+          "Rectus Femoris": "36%",
+          "Vastus Lateralis": "27%",
+          "Vastus Medialis": "27%",
+          "Vastus Intermedius": "10%"
+        },
+        "description": "Explosive squat with jump develops lower body power and strength. High-intensity metabolic exercise."
+      }
+    }
+  },
+  {
+    "name": "Mountain Climber",
+    "primaryMuscles": [
+      "Core"
+    ],
+    "secondaryMuscles": [
+      "Shoulders",
+      "Chest",
+      "Quadriceps"
+    ],
+    "equipment": [
+      "Bodyweight"
+    ],
+    "category": "Cardio",
+    "muscleHeadTargeting": {
+      "Core": {
+        "heads": [
+          "Rectus Abdominis",
+          "Transverse Abdominis",
+          "Obliques"
+        ],
+        "targetingDistribution": {
+          "Rectus Abdominis": "40%",
+          "Transverse Abdominis": "40%",
+          "Obliques": "20%"
+        },
+        "description": "High-intensity cardio exercise with core emphasis. Demands significant core stability and strength."
+      }
+    }
+  },
+  {
+    "name": "Kettlebell Goblet Squat",
+    "primaryMuscles": [
+      "Quadriceps",
+      "Glutes"
+    ],
+    "secondaryMuscles": [
+      "Core",
+      "Upper Back"
+    ],
+    "equipment": [
+      "Kettlebell"
+    ],
+    "category": "Strength",
+    "muscleHeadTargeting": {
+      "Quadriceps": {
+        "heads": [
+          "Rectus Femoris",
+          "Vastus Lateralis",
+          "Vastus Medialis",
+          "Vastus Intermedius"
+        ],
+        "targetingDistribution": {
+          "Rectus Femoris": "26%",
+          "Vastus Lateralis": "29%",
+          "Vastus Medialis": "29%",
+          "Vastus Intermedius": "16%"
+        },
+        "description": "Front-loaded squat with upright posture. Excellent for quad development and core engagement."
+      }
+    }
+  },
+  {
+    "name": "Farmer's Carry",
+    "primaryMuscles": [
+      "Traps",
+      "Forearms"
+    ],
+    "secondaryMuscles": [
+      "Core",
+      "Back"
+    ],
+    "equipment": [
+      "Dumbbells"
+    ],
+    "category": "Functional",
+    "muscleHeadTargeting": {
+      "Grip and Stabilizers": {
+        "heads": [
+          "Trapezius",
+          "Forearms",
+          "Transverse Abdominis"
+        ],
+        "targetingDistribution": {
+          "Trapezius": "45%",
+          "Forearms": "35%",
+          "Transverse Abdominis": "20%"
+        },
+        "description": "Loaded carry develops grip strength and isometric core stability. Excellent for functional strength and conditioning."
+      }
+    }
+  }
+]

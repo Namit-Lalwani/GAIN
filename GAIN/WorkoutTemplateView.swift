@@ -1,21 +1,19 @@
 import SwiftUI
 
-// MARK: - Model
+// MARK: - Model (Legacy - for backwards compatibility)
 struct WorkoutTemplate: Identifiable, Codable, Equatable {
     let id: UUID
     var name: String
     var exercises: [String]
-    var assignedDay: String?
 
-    init(id: UUID = UUID(), name: String, exercises: [String] = [], assignedDay: String? = nil) {
+    init(id: UUID = UUID(), name: String, exercises: [String] = []) {
         self.id = id
         self.name = name
         self.exercises = exercises
-        self.assignedDay = assignedDay
     }
 }
 
-// MARK: - Main List View
+// MARK: - Main List View (Legacy)
 struct WorkoutTemplateView: View {
     @State private var templates: [WorkoutTemplate] = [
         WorkoutTemplate(name: "Push Day", exercises: ["Bench Press", "Overhead Press"]),
@@ -34,15 +32,9 @@ struct WorkoutTemplateView: View {
                             VStack(alignment: .leading, spacing: 4) {
                                 Text(template.name)
                                     .font(.headline)
-                                if let day = template.assignedDay {
-                                    Text("Assigned to: \(day)")
-                                        .font(.caption)
-                                        .foregroundColor(.secondary)
-                                } else {
-                                    Text("\(template.exercises.count) exercises")
-                                        .font(.caption)
-                                        .foregroundColor(.secondary)
-                                }
+                                Text("\(template.exercises.count) exercises")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
                             }
                             .padding(.vertical, 6)
                         }
@@ -108,8 +100,6 @@ struct WorkoutTemplateDetailView: View {
     @Binding var template: WorkoutTemplate
     @State private var newExercise: String = ""
 
-    private let days = ["None", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-
     var body: some View {
         Form {
             Section(header: Text("Template")) {
@@ -145,23 +135,8 @@ struct WorkoutTemplateDetailView: View {
                 }
             }
 
-            Section(header: Text("Assign to day")) {
-                Picker("Assigned Day", selection: Binding(
-                    get: { template.assignedDay ?? "None" },
-                    set: { newValue in
-                        template.assignedDay = (newValue == "None") ? nil : newValue
-                    }
-                )) {
-                    ForEach(days, id: \.self) { day in
-                        Text(day).tag(day)
-                    }
-                }
-            }
-
             Section {
                 Button("Save (returns)") {
-                    // Changes already bound. Just pop view — handled by NavigationLink parent.
-                    // No explicit action required here.
                     hideKeyboard()
                 }
             }

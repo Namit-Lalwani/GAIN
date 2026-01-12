@@ -33,11 +33,18 @@ public struct Exercise: Identifiable, Codable {
     public let id: UUID
     public var name: String
     public var sets: [RepSet]
+    public var muscleGroups: [String]?   // e.g. ["chest","triceps","push"]
 
-    public init(id: UUID = UUID(), name: String, sets: [RepSet] = []) {
+    public init(
+        id: UUID = UUID(),
+        name: String,
+        sets: [RepSet] = [],
+        muscleGroups: [String]? = nil
+    ) {
         self.id = id
         self.name = name
         self.sets = sets
+        self.muscleGroups = muscleGroups
     }
 }
 

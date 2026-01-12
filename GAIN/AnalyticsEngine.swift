@@ -129,6 +129,55 @@ public struct AnalyticsEngine {
         
         return prs.sorted { $0.date > $1.date }
     }
+
+    /// Best (max) PR per exercise across all workouts.
+    /// Uses the PR value from detectPRs (currently volume-based) and keeps the latest PR for each exercise.
+    public static func bestPRPerExercise(workouts: [WorkoutRecord]) -> [(exercise: String, value: Double, date: Date)] {
+        let prs = detectPRs(workouts: workouts)
+        var best: [String: (value: Double, date: Date)] = [:]
+
+        for pr in prs {
+            guard let exercise = pr.exerciseId else { continue }
+            let current = best[exercise]
+            if current == nil || pr.value > (current?.value ?? 0) {
+                best[exercise] = (value: pr.value, date: pr.date)
+            }
+        }
+
+        return best
+            .map { (exercise: $0.key, value: $0.value.value, date: $0.value.date) }
+            .sorted { $0.value > $1.value }
+    }
+    
+    // MARK: - Muscle Group Volume
+    /// Aggregate volume and set counts per muscle group based on WorkoutExerciseRecord.muscleGroups.
+    /// If an exercise has multiple groups, its volume is counted towards each group.
+    public static func volumeByMuscleGroup(workouts: [WorkoutRecord]) -> [(group: String, volume: Double, sets: Int)] {
+        var aggregates: [String: (volume: Double, sets: Int)] = [:]
+        
+        for workout in workouts {
+            for exercise in workout.exercises {
+                let groups = (exercise.muscleGroups ?? ["Other"]).isEmpty ? ["Other"] : (exercise.muscleGroups ?? ["Other"])
+                let exerciseVolume = exercise.sets.reduce(0.0) { $0 + Double($1.reps) * $1.weight }
+                let exerciseSets = exercise.sets.count
+                guard exerciseVolume > 0 || exerciseSets > 0 else { continue }
+                
+                for group in groups {
+                    let trimmed = group.trimmingCharacters(in: .whitespacesAndNewlines)
+                    let key = trimmed.isEmpty ? "Other" : trimmed
+                    let current = aggregates[key] ?? (0.0, 0)
+                    aggregates[key] = (
+                        volume: current.volume + exerciseVolume,
+                        sets: current.sets + exerciseSets
+                    )
+                }
+            }
+        }
+        
+        return aggregates
+            .map { (group: $0.key, volume: $0.value.volume, sets: $0.value.sets) }
+            .sorted { $0.volume > $1.volume }
+    }
     
     // MARK: - Heart Rate Zones
     public struct HRZones {
@@ -236,6 +285,21 @@ public struct AnalyticsEngine {
         } else {
             return .high
         }
+    }
+    
+    /// Count sessions per intensity bucket for a collection of workouts.
+    public static func intensityBreakdown(workouts: [WorkoutRecord]) -> [(intensity: SessionIntensity, count: Int)] {
+        var counts: [SessionIntensity: Int] = [:]
+        
+        for workout in workouts {
+            let category = classifySessionIntensity(workout)
+            guard category != .unknown else { continue }
+            counts[category, default: 0] += 1
+        }
+        
+        return counts
+            .map { (intensity: $0.key, count: $0.value) }
+            .sorted { $0.intensity.rawValue < $1.intensity.rawValue }
     }
     
     // MARK: - Summary Statistics

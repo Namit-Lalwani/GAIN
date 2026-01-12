@@ -1,18 +1,19 @@
 import XCTest
 @testable import GAIN
 
+@MainActor
 final class SessionStoreTests: XCTestCase {
     
     var sessionStore: SessionStore!
     
-    override func setUp() {
-        super.setUp()
+    override func setUp() async throws {
+        try await super.setUp()
         sessionStore = SessionStore.shared
     }
     
-    override func tearDown() {
+    override func tearDown() async throws {
         sessionStore = nil
-        super.tearDown()
+        try await super.tearDown()
     }
     
     // MARK: - START_SESSION Test
@@ -21,11 +22,14 @@ final class SessionStoreTests: XCTestCase {
         
         let session = sessionStore.startSession()
         
-        XCTAssertNotNil(sessionStore.activeSessionId)
-        XCTAssertEqual(sessionStore.activeSessionId, session.id)
+        let activeSessionId = sessionStore.activeSessionId
+        let foundSession = sessionStore.sessions.first { $0.id == session.id }
+        
+        XCTAssertNotNil(activeSessionId)
+        XCTAssertEqual(activeSessionId, session.id)
         XCTAssertEqual(session.status, .running)
-        XCTAssertNotNil(sessionStore.sessions.first { $0.id == session.id })
-        XCTAssertNotEqual(initialActiveId, sessionStore.activeSessionId)
+        XCTAssertNotNil(foundSession)
+        XCTAssertNotEqual(initialActiveId, activeSessionId)
     }
     
     // MARK: - PAUSE_SESSION Test
@@ -36,8 +40,11 @@ final class SessionStoreTests: XCTestCase {
         sessionStore.pauseSession(session.id)
         
         let paused = sessionStore.sessions.first { $0.id == session.id }
-        XCTAssertEqual(paused?.status, .paused)
-        XCTAssertGreaterThan(paused?.revision ?? 0, initialRevision)
+        let pausedStatus = paused?.status
+        let pausedRevision = paused?.revision ?? 0
+        
+        XCTAssertEqual(pausedStatus, .paused)
+        XCTAssertGreaterThan(pausedRevision, initialRevision)
     }
     
     // MARK: - RESUME_SESSION Test
@@ -48,7 +55,8 @@ final class SessionStoreTests: XCTestCase {
         sessionStore.resumeSession(session.id)
         
         let resumed = sessionStore.sessions.first { $0.id == session.id }
-        XCTAssertEqual(resumed?.status, .running)
+        let resumedStatus = resumed?.status
+        XCTAssertEqual(resumedStatus, .running)
     }
     
     // MARK: - END_SESSION Test
@@ -64,10 +72,15 @@ final class SessionStoreTests: XCTestCase {
         sessionStore.endSession(sessionId, finalMetrics: finalMetrics)
         
         let ended = sessionStore.sessions.first { $0.id == sessionId }
-        XCTAssertEqual(ended?.status, .ended)
-        XCTAssertNotNil(ended?.endedAt)
-        XCTAssertNotNil(ended?.finalMetrics)
-        XCTAssertNil(sessionStore.activeSessionId) // Should clear active session
+        let activeSessionId = sessionStore.activeSessionId
+        let endedStatus = ended?.status
+        let endedAt = ended?.endedAt
+        let finalMetricsResult = ended?.finalMetrics
+        
+        XCTAssertEqual(endedStatus, .ended)
+        XCTAssertNotNil(endedAt)
+        XCTAssertNotNil(finalMetricsResult)
+        XCTAssertNil(activeSessionId) // Should clear active session
     }
     
     // MARK: - LOG_METRICS Test
@@ -85,13 +98,18 @@ final class SessionStoreTests: XCTestCase {
         )
         
         let updated = sessionStore.sessions.first { $0.id == session.id }
-        XCTAssertEqual(updated?.metrics.count, initialMetricCount + 1)
-        XCTAssertGreaterThan(updated?.revision ?? 0, initialRevision)
-        
+        let updatedMetricCount = updated?.metrics.count ?? 0
+        let updatedRevision = updated?.revision ?? 0
         let lastMetric = updated?.metrics.last
-        XCTAssertEqual(lastMetric?.heartRate, 150)
-        XCTAssertEqual(lastMetric?.power, 250)
-        XCTAssertEqual(lastMetric?.cadence, 90)
+        let lastMetricHeartRate = lastMetric?.heartRate
+        let lastMetricPower = lastMetric?.power
+        let lastMetricCadence = lastMetric?.cadence
+        
+        XCTAssertEqual(updatedMetricCount, initialMetricCount + 1)
+        XCTAssertGreaterThan(updatedRevision, initialRevision)
+        XCTAssertEqual(lastMetricHeartRate, 150)
+        XCTAssertEqual(lastMetricPower, 250)
+        XCTAssertEqual(lastMetricCadence, 90)
     }
     
     // MARK: - Conflict Resolution Test
@@ -111,9 +129,11 @@ final class SessionStoreTests: XCTestCase {
         sessionStore.mergeSessions([remoteSession])
         
         let merged = sessionStore.sessions.first { $0.id == localSession.id }
+        let mergedRevision = merged?.revision
+        let mergedStatus = merged?.status
         // Higher revision should win
-        XCTAssertEqual(merged?.revision, 6)
-        XCTAssertEqual(merged?.status, .ended)
+        XCTAssertEqual(mergedRevision, 6)
+        XCTAssertEqual(mergedStatus, .ended)
     }
 }
 

@@ -126,17 +126,17 @@ struct ExerciseChartView: View {
                 
                 // Stats
                 HStack(spacing: 12) {
-                    StatCard(
+                    ExerciseStatCard(
                         title: "Best Volume",
                         value: String(format: "%.0f", exerciseData.map { $0.volume }.max() ?? 0)
                     )
                     
-                    StatCard(
+                    ExerciseStatCard(
                         title: "Avg Volume",
                         value: String(format: "%.0f", exerciseData.isEmpty ? 0 : exerciseData.map { $0.volume }.reduce(0, +) / Double(exerciseData.count))
                     )
                     
-                    StatCard(
+                    ExerciseStatCard(
                         title: "Sessions",
                         value: "\(exerciseData.count)"
                     )
@@ -174,8 +174,8 @@ struct ExerciseChartView: View {
     }
 }
 
-// MARK: - Stat Card
-struct StatCard: View {
+// MARK: - Exercise Stat Card
+struct ExerciseStatCard: View {
     let title: String
     let value: String
     
@@ -196,7 +196,7 @@ struct StatCard: View {
 }
 
 // MARK: - Exercise List View
-struct ExerciseProgressView: View {
+struct ExerciseListView: View {
     @EnvironmentObject var workoutStore: WorkoutStore
     
     private var uniqueExercises: [String] {

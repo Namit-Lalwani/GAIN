@@ -6,7 +6,7 @@ struct WorkoutListView: View {
     var body: some View {
         VStack {
             List {
-                ForEach(workoutStore.workouts) { workout in
+                ForEach(workoutStore.records) { workout in
                     Text(workout.templateName ?? "Custom Workout")
                 }
             }

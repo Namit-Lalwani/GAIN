@@ -1,163 +1,216 @@
 // WorkoutStore.swift
 import Foundation
 import Combine
-
-// Note: RepSet, ExerciseRecord, and WorkoutRecord are defined in WorkoutRecord.swift
-// This file only contains the WorkoutStore class
-
-// -----------------
-// STORE
-// -----------------
+import os.log
 
 @MainActor
-public final class WorkoutStore: ObservableObject {
+final class WorkoutStore: ObservableObject {
+    // MARK: - Singleton
     public static let shared = WorkoutStore()
-
-    @Published public private(set) var records: [WorkoutRecord] = [] {
-        didSet { 
-            guard !isLoading else { return }
-            // Debounce saves
-            saveDebouncer.cancel()
-            saveDebouncer = DispatchWorkItem { [weak self] in
-                Task { @MainActor in
-                    self?.performSave()
-                }
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: saveDebouncer)
+    
+    // MARK: - Properties
+    @Published private(set) var records: [WorkoutRecord] = [] {
+        didSet {
+            scheduleSave()
         }
     }
     
-    private var saveDebouncer = DispatchWorkItem {}
+    private let logger = Logger(
+        subsystem: "com.yourdomain.GAIN",
+        category: String(describing: WorkoutStore.self)
+    )
     
-    // Compatibility property for code that uses 'workouts'
-    public var workouts: [WorkoutRecord] {
-        records
-    }
-
-    private let filename = "workouts.json"
-    private var isLoading = false
-
-    private let encoder: JSONEncoder = {
-        let e = JSONEncoder()
-        e.outputFormatting = [.prettyPrinted]
-        e.dateEncodingStrategy = .iso8601
-        return e
-    }()
-
-    private let decoder: JSONDecoder = {
-        let d = JSONDecoder()
-        d.dateDecodingStrategy = .iso8601
-        return d
-    }()
-
-    private init() {
-        // Initialize synchronously, load asynchronously after a brief delay
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            Task { @MainActor in
-                await self.performLoad()
-            }
+    private let fileManager: FileManager
+    private let encoder: JSONEncoder
+    private let decoder: JSONDecoder
+    private let saveQueue: DispatchQueue
+    
+    // Debouncer
+    private let saveDebouncer = PassthroughSubject<Void, Never>()
+    private var saveCancellable: AnyCancellable?
+    
+    // MARK: - Initialization
+    private init(
+        fileManager: FileManager = .default,
+        encoder: JSONEncoder = JSONEncoder(),
+        decoder: JSONDecoder = JSONDecoder()
+    ) {
+        self.fileManager = fileManager
+        self.encoder = encoder
+        self.encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+        self.encoder.dateEncodingStrategy = .iso8601
+        
+        self.decoder = decoder
+        self.decoder.dateDecodingStrategy = .iso8601
+        
+        self.saveQueue = DispatchQueue(label: "com.yourdomain.GAIN.workoutstore.save", qos: .utility)
+        
+        setupSaveDebouncer()
+        
+        // Initial load
+        Task {
+            await load()
         }
     }
-
-    // MARK: - CRUD
+    
+    // MARK: - Public API
+    
+    /// Adds a new workout record
     public func add(_ record: WorkoutRecord) {
-        if records.isEmpty {
-            records = [record]
-        } else {
-            records.insert(record, at: 0)
-        }
+        records.insert(record, at: 0)
+        logger.debug("Added workout record with ID: \(record.id.uuidString)")
     }
-
+    
+    /// Updates an existing workout record
     public func update(_ record: WorkoutRecord) {
-        guard let idx = records.firstIndex(where: { $0.id == record.id }),
-              idx < records.count else { return }
-        records[idx] = record
+        guard let index = records.firstIndex(where: { $0.id == record.id }) else {
+            logger.error("Failed to find workout record with ID: \(record.id.uuidString)")
+            return
+        }
+        records[index] = record
+        logger.debug("Updated workout record with ID: \(record.id.uuidString)")
     }
-
+    
+    /// Deletes a workout record by ID
     public func delete(id: UUID) {
+        let before = records.count
         records.removeAll { $0.id == id }
-    }
-    
-    public func delete(at indexSet: IndexSet) {
-        for index in indexSet {
-            if index < records.count {
-                records.remove(at: index)
-            }
+        if records.count < before {
+            logger.debug("Deleted workout record with ID: \(id.uuidString)")
+        } else {
+            logger.warning("Attempted to delete non-existent workout record with ID: \(id.uuidString)")
         }
     }
 
-    public func clearAll() {
-        records.removeAll()
-    }
-    
-    // MARK: - Export
+    // MARK: - CSV Export
+    /// Export all workouts to a temporary CSV file and return its URL.
     public func exportCSV() async throws -> URL {
-        let fm = FileManager.default
-        let doc = try fm.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-        let url = doc.appendingPathComponent("workouts_export.csv")
-        
-        var csv = "Date,Template,Duration (min),Exercises,Total Volume\n"
-        
-        for record in records {
-            let dateStr = ISO8601DateFormatter().string(from: record.start)
+        // Snapshot records on the main actor
+        let recordsToExport = records
+
+        // Build CSV content
+        var csv = "id,date,template,durationSeconds,totalVolume,totalReps\n"
+        let formatter = ISO8601DateFormatter()
+
+        for record in recordsToExport {
+            let id = record.id.uuidString
+            let dateString = formatter.string(from: record.start)
             let template = record.templateName ?? "Custom"
-            let durationMin = Int(record.duration / 60)
-            let exerciseNames = record.exercises.map { $0.name }.joined(separator: "; ")
-            let volume = String(format: "%.0f", record.totalVolume)
-            
-            csv += "\"\(dateStr)\",\"\(template)\",\(durationMin),\"\(exerciseNames)\",\(volume)\n"
-        }
-        
-        try csv.write(to: url, atomically: true, encoding: .utf8)
-        return url
-    }
+            let duration = Int(record.duration)
+            let volume = record.totalVolume
+            let reps = record.totalReps
 
-    // MARK: - Persistence (simple file-based)
-    private func fileURL() throws -> URL {
-        let fm = FileManager.default
-        let doc = try fm.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-        return doc.appendingPathComponent(filename)
-    }
-
-    private func performSave() {
-        guard !isLoading else { return }
-        do {
-            let url = try fileURL()
-            let data = try encoder.encode(records)
-            try data.write(to: url, options: [.atomic])
-        } catch {
-            print("WorkoutStore save error:", error.localizedDescription)
+            let line = "\(id),\(dateString),\(template.replacingOccurrences(of: ",", with: " ")),\(duration),\(volume),\(reps)\n"
+            csv.append(line)
         }
+
+        // Write to a temporary file in the documents directory
+        let docs = try fileManager.url(
+            for: .documentDirectory,
+            in: .userDomainMask,
+            appropriateFor: nil,
+            create: true
+        )
+        let exportURL = docs.appendingPathComponent("workouts_export_\(UUID().uuidString).csv")
+
+        try csv.write(to: exportURL, atomically: true, encoding: .utf8)
+        logger.debug("Exported CSV to \(exportURL.path, privacy: .public)")
+        return exportURL
     }
     
-    // Note: save() is not called directly - debouncing is handled in didSet
-
-    @MainActor
-    private func performLoad() async {
-        isLoading = true
-        defer {
-            isLoading = false
-        }
-        
+    // MARK: - Debounced save
+    
+    private func setupSaveDebouncer() {
+        saveCancellable = saveDebouncer
+            .debounce(for: .seconds(1), scheduler: saveQueue)
+            .sink { [weak self] _ in
+                self?.performSave()
+            }
+    }
+    
+    private func scheduleSave() {
+        saveDebouncer.send(())
+    }
+    
+    // MARK: - Persistence
+    
+    private func fileURL() throws -> URL {
+        try fileManager.url(
+            for: .documentDirectory,
+            in: .userDomainMask,
+            appropriateFor: nil,
+            create: true
+        )
+        .appendingPathComponent("workouts.json")
+    }
+    
+    private func load() async {
         do {
             let url = try fileURL()
-            guard FileManager.default.fileExists(atPath: url.path) else {
-                records = []
+            guard fileManager.fileExists(atPath: url.path) else {
+                logger.debug("No existing workout data found, starting with empty store")
                 return
             }
             
             let data = try Data(contentsOf: url)
-            guard !data.isEmpty else {
-                records = []
-                return
-            }
-            
             let decoded = try decoder.decode([WorkoutRecord].self, from: data)
-            records = decoded
+            
+            // @MainActor so this is safe
+            self.records = decoded.sorted { $0.start > $1.start }
+            logger.debug("Successfully loaded \(decoded.count) workout records")
         } catch {
-            print("WorkoutStore load error:", error.localizedDescription)
-            records = []
+            logger.error("Failed to load workout data: \(error.localizedDescription)")
+            self.records = []
         }
     }
+    
+    private func performSave() {
+        let recordsToSave = self.records
+        
+        do {
+            let url = try fileURL()
+            let data = try encoder.encode(recordsToSave)
+            
+            // temp file then move
+            let tempURL = url.deletingLastPathComponent()
+                .appendingPathComponent(UUID().uuidString)
+                .appendingPathExtension("tmp")
+            
+            try data.write(to: tempURL, options: .atomic)
+            
+            if fileManager.fileExists(atPath: url.path) {
+                try fileManager.removeItem(at: url)
+            }
+            
+            try fileManager.moveItem(at: tempURL, to: url)
+            logger.debug("Successfully saved \(recordsToSave.count) workout records")
+        } catch {
+            logger.error("Failed to save workout data: \(error.localizedDescription)")
+        }
+    }
+}
+
+// MARK: - Preview Support
+extension WorkoutStore {
+    static var preview: WorkoutStore = {
+        let store = WorkoutStore()
+        store.records = [
+            WorkoutRecord(
+                templateName: "Full Body",
+                start: Date().addingTimeInterval(-86400),
+                end: Date().addingTimeInterval(-82800),
+                duration: 3600,
+                exercises: [
+                    WorkoutExerciseRecord(
+                        name: "Squats",
+                        sets: [
+                            WorkoutSetRecord(reps: 10, weight: 60),
+                            WorkoutSetRecord(reps: 10, weight: 60)
+                        ]
+                    )
+                ]
+            )
+        ]
+        return store
+    }()
 }
